@@ -217,6 +217,21 @@ class Document(Common, Base):
     status: Mapped[str] = mapped_column(String, default="draft")
     parent_document_id: Mapped[int | None] = mapped_column(ForeignKey("document.id"), nullable=True)
     tax_serial: Mapped[str] = mapped_column(String, default="")
+    version: Mapped[int] = mapped_column(Integer, default=1)
+    issued_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
+    header_line: Mapped[str] = mapped_column(String, default="")
+    addressee_lines: Mapped[list | None] = mapped_column(JSON, nullable=True)
+    addressee_format: Mapped[int] = mapped_column(Integer, default=0)
+    list_title: Mapped[str] = mapped_column(String, default="")
+    list_subtitle: Mapped[str] = mapped_column(String, default="")
+    attachments: Mapped[list] = mapped_column(JSON, default=list)   # wizard step 6 config
+    notes: Mapped[str] = mapped_column(Text, default="")
+
+    issuer: Mapped["Issuer"] = relationship(foreign_keys=[issuer_id])
+    party: Mapped["Party | None"] = relationship(foreign_keys=[party_id])
+    contact: Mapped["Contact | None"] = relationship(foreign_keys=[contact_id])
+    project: Mapped["Project | None"] = relationship(foreign_keys=[project_id])
+    letter_type: Mapped["LetterType | None"] = relationship(foreign_keys=[letter_type_id])
 
     lines: Mapped[list["DocumentLine"]] = relationship(cascade="all, delete-orphan",
                                                        order_by="DocumentLine.idx")
@@ -241,6 +256,8 @@ class DocumentLine(Common, Base):
     total: Mapped[int] = mapped_column(Integer, default=0)
     buyer_supplied: Mapped[bool] = mapped_column(Boolean, default=False)
     emphasis: Mapped[bool] = mapped_column(Boolean, default=False)
+    is_service: Mapped[bool] = mapped_column(Boolean, default=False)
+    category: Mapped[str] = mapped_column(String, default="")
     note: Mapped[str] = mapped_column(Text, default="")
 
 
@@ -264,7 +281,7 @@ class DocumentAccount(Common, Base):
 class DocumentFile(Common, Base):
     __tablename__ = "document_file"
     document_id: Mapped[int] = mapped_column(ForeignKey("document.id"))
-    role: Mapped[str] = mapped_column(String)  # docx/pdf/merged_pdf/attachment_drawing/attachment_other
+    role: Mapped[str] = mapped_column(String)  # docx/pdf/merged_pdf/final/attachment_*
     path: Mapped[str] = mapped_column(String)
     version: Mapped[int] = mapped_column(Integer, default=1)
     sha256: Mapped[str] = mapped_column(String, default="")
@@ -274,7 +291,6 @@ class DocumentFile(Common, Base):
 
 class Task(Common, Base):
     __tablename__ = "task"
-    __table_args__ = (UniqueConstraint("source", "document_id"),)
     title: Mapped[str] = mapped_column(String)
     project_id: Mapped[int | None] = mapped_column(ForeignKey("project.id"), nullable=True)
     document_id: Mapped[int | None] = mapped_column(ForeignKey("document.id"), nullable=True)
@@ -284,6 +300,13 @@ class Task(Common, Base):
     source: Mapped[str] = mapped_column(String, default="manual")
     notes: Mapped[str] = mapped_column(Text, default="")
     done_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
+    # (rule_code, document/project id) of an automatic task — never created twice (doc 06 §6.5)
+    auto_key: Mapped[str | None] = mapped_column(String, unique=True, nullable=True)
+    action: Mapped[dict | None] = mapped_column(JSON, nullable=True)  # e.g. open the letter wizard
+
+    project: Mapped["Project | None"] = relationship()
+    document: Mapped["Document | None"] = relationship()
+    party: Mapped["Party | None"] = relationship()
 
 
 # ---------------------------------------------------------------- settings & system (§3.4)
@@ -298,8 +321,8 @@ class NumberCounter(Base):
     __tablename__ = "number_counter"
     __table_args__ = (UniqueConstraint("issuer_id", "group", "period_key"),)
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
-    issuer_id: Mapped[int] = mapped_column(ForeignKey("issuer.id"))
-    group: Mapped[str] = mapped_column(String)  # letter / invoice_family
+    issuer_id: Mapped[int | None] = mapped_column(ForeignKey("issuer.id"), nullable=True)  # None = shared
+    group: Mapped[str] = mapped_column(String)  # letter / invoice_family / all
     period_key: Mapped[str] = mapped_column(String)
     last_seq: Mapped[int] = mapped_column(Integer, default=0)
 

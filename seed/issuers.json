@@ -20,7 +20,7 @@
     "proforma_template": "proforma_personal.docx",
     "invoice_template": "proforma_personal.docx",
     "statement_template": "proforma_personal.docx",
-    "number_pattern": "{yyy}{mm}{seq:02}",
+    "number_pattern": "{yyy}{m}{seq:02}",
     "number_scope": "per_month",
     "default_account_codes": ["TEJARAT_BAHRAMI_29"],
     "notes": "الگوی شماره از نمونه‌های 1401 استخراج شده: 401202 = سال 401، ماه 12، شماره 02 در ماه."
