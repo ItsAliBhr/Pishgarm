@@ -41,11 +41,25 @@ def _qt_app():
     _APP.processEvents()
 
 
+class UnexpectedDialog(AssertionError):
+    pass
+
+
 @pytest.fixture
 def qapp(_qt_app, monkeypatch):
+    """Message boxes never block a test: an unexpected one fails the test with its text
+    (a modal box nobody clicks would otherwise hang CI)."""
     from PySide6.QtGui import QDesktopServices
-    from PySide6.QtWidgets import QApplication
+    from PySide6.QtWidgets import QApplication, QMessageBox
     monkeypatch.setattr(QDesktopServices, "openUrl", staticmethod(lambda url: True))
+
+    def boom(*args, **kwargs):
+        texts = [a for a in args if isinstance(a, str)]
+        raise UnexpectedDialog(" | ".join(texts))
+
+    for name in ("information", "warning", "critical", "question"):
+        monkeypatch.setattr(QMessageBox, name, staticmethod(boom))
+    monkeypatch.setattr(QMessageBox, "exec", lambda self: boom(self.text()))
     yield _qt_app
     for w in QApplication.topLevelWidgets():
         w.close()
