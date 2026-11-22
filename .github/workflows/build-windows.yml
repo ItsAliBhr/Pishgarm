@@ -36,12 +36,27 @@ jobs:
         with:
           name: PishgarmDocsSetup
           path: dist/PishgarmDocsSetup.exe
-      - name: Publish GitHub Release (only for v* tags)
-        if: startsWith(github.ref, 'refs/tags/v')
+      - name: Read app version
+        id: ver
+        shell: bash
+        run: echo "version=$(python -c 'import app; print(app.__version__)')" >> "$GITHUB_OUTPUT"
+      # Every successful build publishes (or refreshes) the release v<app version>;
+      # the tag is created by the action through the API. Bump app/__init__.py for a new release.
+      - name: Publish GitHub Release
         uses: softprops/action-gh-release@v2
         with:
+          tag_name: v${{ steps.ver.outputs.version }}
+          target_commitish: ${{ github.sha }}
+          name: دفتر اسناد پیشگرم v${{ steps.ver.outputs.version }}
           files: dist/PishgarmDocsSetup.exe
-          name: دفتر اسناد پیشگرم ${{ github.ref_name }}
+          overwrite_files: true
+          make_latest: true
           body: |
-            فایل PishgarmDocsSetup.exe را دانلود و اجرا کنید (ویندوز ۱۰ یا ۱۱، ۶۴ بیتی).
-            اگر Windows SmartScreen هشدار داد: More info ← Run anyway.
+            ## نصب
+            1. فایل **PishgarmDocsSetup.exe** را از پایین همین صفحه دانلود کنید.
+            2. اجرا کنید. اگر Windows SmartScreen هشدار داد: **More info** ← **Run anyway**.
+            3. مراحل نصب را جلو بروید؛ آیکون «دفتر اسناد پیشگرم» روی دسکتاپ ساخته می‌شود.
+
+            نیاز: ویندوز ۱۰ یا ۱۱، ۶۴ بیتی. اطلاعات در `%LOCALAPPDATA%\PishgarmDocs` می‌ماند و با نصب نسخه‌ی جدید پاک نمی‌شود.
+
+            ساخته‌شده از کامیت ${{ github.sha }}.
