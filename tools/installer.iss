@@ -1,4 +1,6 @@
-; Inno Setup script — Persian installer, per-user install, desktop shortcut (doc 07 §7.4).
+﻿; Inno Setup script — Persian installer, per-user install, desktop shortcut (doc 07 §7.4).
+; Farsi.isl is Inno Setup's unofficial Persian translation, vendored here because
+; the standard install does not include it. This file is UTF-8 with BOM so Persian text survives.
 ; Build: iscc /DAppVersion=0.1.0 tools\installer.iss   (after pyinstaller app.spec)
 
 #ifndef AppVersion
@@ -26,7 +28,7 @@ MinVersion=10.0
 WizardStyle=modern
 
 [Languages]
-Name: "farsi"; MessagesFile: "compiler:Languages\Farsi.isl"
+Name: "farsi"; MessagesFile: "Farsi.isl"
 
 [Tasks]
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"
