@@ -14,7 +14,7 @@ from sqlalchemy.orm import Session
 
 from app import paths
 from app.core import clauses as clause_rules
-from app.core import jalali, letters, numbering, pdf_tools
+from app.core import jalali, letters, money, numbering, pdf_tools
 from app.core.context import all_output_text, attachment_list_context, build_context, template_name
 from app.core.draft import TITLE_BY_KIND, ClauseSel, Draft, Line
 from app.core.files import base_file_name, document_folder, versioned_path
@@ -135,7 +135,7 @@ def apply_letter_type(s: Session, d: Draft, letter_type_id: int | None) -> None:
                          ("retention_percent", p.get("retention_percent")),
                          ("handover_date", jalali.fmt(p["handover_date"]) if p.get("handover_date") else None)):
             if key in names and val not in (None, "") and d.fields.get(key) in (None, ""):
-                d.fields[key] = str(val) if not isinstance(val, Decimal) else str(val.normalize())
+                d.fields[key] = money.fmt_percent(val) if isinstance(val, Decimal) else str(val)
         if "person_name" in names and not d.fields.get("person_name"):
             d.fields["person_name"] = d.issuer.get("name", "")
         keep = [c for c in d.clauses if c.code == "PAY_TO_ACCOUNT" and lt.with_account]

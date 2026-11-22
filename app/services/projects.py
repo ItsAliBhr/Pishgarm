@@ -9,6 +9,7 @@ from pathlib import Path
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
+from app.core.money import fmt_percent
 from app.core.normalize import normalize_text
 from app.db.models import ArchiveFile, Document, Party, Project
 from app.services import tasks as task_service
@@ -69,7 +70,7 @@ def receivables(s: Session) -> list[Receivable]:
         base = p.contract_amount or sums["invoice"]
         amount = int(base * float(p.retention_percent or 0) / 100)
         out.append(Receivable(p.party.short_name or p.party.name, "retention",
-                              f"سپرده‌ی {p.retention_percent:g}٪ {p.title}", amount, None, p.id, p.handover_date))
+                              f"سپرده‌ی {fmt_percent(p.retention_percent)}٪ {p.title}", amount, None, p.id, p.handover_date))
     out.sort(key=lambda r: (r.party, r.kind))
     return out
 

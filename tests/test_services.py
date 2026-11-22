@@ -201,3 +201,62 @@ def test_receivables(db):
         assert rec and rec[0].amount == doc.payable
         docs.set_status(s, doc.id, "paid")
         assert not proj.receivables(s)
+
+
+def test_markup_purchase_price_not_in_docx(db):
+    """Golden 3: 7 Siemens cards, markup 25%, VAT 10% → 25,025,000,000; purchase prices and the
+    supplier name never reach the Word file."""
+    from app.core.money import markup_price
+    with db() as s:
+        company, _ = _ids(s)
+        party = _party(s, "ناب")
+        p = Project(party_id=party.id, title="کارت‌های زیمنس", supplier_name="تأمین‌کننده‌ی محرمانه")
+        s.add(p)
+        s.commit()
+        d = docs.new_draft(s, "proforma", company.id)
+        docs.apply_party(s, d, party.id)
+        from app.services.convert import project_dict
+        d.project = project_dict(p)
+        purchases = [4_100_000_000, 3_300_000_000, 2_900_000_000, 2_700_000_000, 2_300_000_000,
+                     1_700_000_000, 1_200_000_000]
+        d.lines = [Line(f"کارت زیمنس مدل {i}", "عدد", Decimal(1), markup_price(pp, 25), purchase_price=pp,
+                        markup_percent=Decimal(25)) for i, pp in enumerate(purchases, 1)]
+        r = docs.issue(s, docs.save_draft(s, d).id)
+        text = _text(r.docx)
+        assert "25,025,000,000" in text
+        for pp in purchases:
+            assert f"{pp:,}" not in text
+        assert "تأمین‌کننده‌ی محرمانه" not in text and "25%" not in text
+        # the purchase price is kept inside the program
+        doc = s.get(Document, r.document_id)
+        assert [l.purchase_price for l in doc.lines] == purchases
+
+
+def test_supplier_name_warning(db):
+    with db() as s:
+        company, _ = _ids(s)
+        party = _party(s, "ناب")
+        p = Project(party_id=party.id, title="x", supplier_name="رهرو ایده رایان")
+        s.add(p)
+        s.commit()
+        d = docs.new_draft(s, "proforma", company.id)
+        docs.apply_party(s, d, party.id)
+        from app.services.convert import project_dict
+        d.project = project_dict(p)
+        d.lines = [Line("نقشه‌ی رهرو ایده رایان", "عدد", Decimal(1), 1000)]
+        assert any("تأمین‌کننده" in i.message for i in docs.check_draft(s, d))
+
+
+def test_duplicate_manual_number_warns(db):
+    with db() as s:
+        company, _ = _ids(s)
+        party = _party(s, "ناب")
+        nums = []
+        for _ in range(2):
+            d = docs.new_draft(s, "proforma", company.id)
+            docs.apply_party(s, d, party.id)
+            d.lines = [Line("x", "عدد", Decimal(1), 1000)]
+            d.number = "777/1405"
+            nums.append(docs.issue(s, docs.save_draft(s, d).id))
+        assert not nums[0].warnings or all("777" not in w.message for w in nums[0].warnings)
+        assert any("777/1405" in w.message for w in nums[1].warnings)

@@ -48,6 +48,11 @@ def after_issue(s: Session, doc: Document, draft) -> None:
     for spec in rules.on_issue(doc.kind, doc.date_greg, _customer(doc), code, doc.fields_json or {},
                                validity, _rules(s)):
         add_auto(s, spec, f"doc{doc.id}", document=doc)
+    if code == "PAY_RETENTION_RELEASE" and doc.project_id:
+        t = s.scalar(select(Task).where(Task.auto_key == f"retention_release:project{doc.project_id}",
+                                        Task.status == "open"))
+        if t:   # the letter it asked for has been issued
+            t.status, t.done_at = "done", datetime.now()
 
 
 def after_status(s: Session, doc: Document, status: str) -> None:

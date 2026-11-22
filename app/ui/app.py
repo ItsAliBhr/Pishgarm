@@ -73,6 +73,7 @@ def main(argv=None) -> int:
     sys.excepthook = _excepthook
     app = create_app(argv)
     try:
+        backup.apply_pending_restore()
         engine, SessionLocal = open_database()
     except Exception:
         show_error("پایگاه داده باز نشد.", traceback.format_exc())

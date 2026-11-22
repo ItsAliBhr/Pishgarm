@@ -60,3 +60,24 @@ def backup_if_due(target_dir: Path, db_file: Path | None = None, keep: int = 30)
     if (Path(target_dir) / f"data-{_stamp()}.db").exists():
         return None
     return backup_now(target_dir, db_file, keep)
+
+
+PENDING_RESTORE = "restore-pending.db"
+
+
+def schedule_restore(source) -> None:
+    """Copy a backup next to data.db; it replaces data.db at the next start (DB is closed then)."""
+    import shutil
+    shutil.copy2(source, paths.data_dir() / PENDING_RESTORE)
+
+
+def apply_pending_restore() -> bool:
+    pending = paths.data_dir() / PENDING_RESTORE
+    if not pending.exists():
+        return False
+    db = paths.db_path()
+    for suffix in ("-wal", "-shm"):
+        Path(str(db) + suffix).unlink(missing_ok=True)
+    pending.replace(db)
+    log.info("restored database from backup")
+    return True
