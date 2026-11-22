@@ -33,6 +33,10 @@ def find_iscc() -> str:
 
 
 def main() -> None:
+    # Windows consoles default to cp1252; make Persian messages printable.
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8", errors="replace")
     if sys.platform != "win32":
         sys.exit("ساخت نصب‌کننده فقط روی ویندوز ممکن است (یا با GitHub Actions).")
     sys.path.insert(0, str(ROOT))
