@@ -148,3 +148,17 @@ def test_files(tmp_path):
     p1.write_text("x")
     p2, v2 = versioned_path(tmp_path, name, ".docx")
     assert v1 == 1 and v2 == 2 and p2.name.endswith(" -v2.docx")
+
+
+def test_versioned_path_long_folder(tmp_path):
+    """Deep folders used to make « -v2» be cut off → endless loop (seen on Windows)."""
+    deep = tmp_path.joinpath(*(["پوشه‌ی بسیار طولانی مشتری"] * 6))
+    deep.mkdir(parents=True)
+    base = "پیش‌فاکتور فولاد ناب تبریز سیستم سوخت‌رسانی 014-1405 14050901"
+    seen = set()
+    for _ in range(4):
+        p, v = versioned_path(deep, base, ".docx")
+        assert p not in seen
+        seen.add(p)
+        p.write_text("x")
+    assert v == 4 and p.name.endswith(" -v4.docx")

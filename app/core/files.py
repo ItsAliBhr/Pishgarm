@@ -31,14 +31,14 @@ def base_file_name(kind: str, party_short_name: str, number: str, d: date, subje
 
 
 def versioned_path(folder: Path, base: str, ext: str, version: int = 1) -> tuple[Path, int]:
-    """First free path at or above `version`: «base.docx», «base -v2.docx», … Never an existing file."""
+    """First free path at or above `version`: «base.docx», «base -v2.docx», … Never an existing file.
+    A long base is shortened first, so the « -vN» suffix always survives and the loop ends."""
     folder = Path(folder)
     v = max(int(version), 1)
+    room = max(MAX_PATH - len(str(folder)) - len(ext) - 10, 20)   # 10 = separator + « -v999»
+    base = base[:room].rstrip() or "سند"
     while True:
         name = base if v == 1 else f"{base} -v{v}"
-        room = MAX_PATH - len(str(folder)) - len(ext) - 8
-        if room < len(name):
-            name = name[:max(room, 20)].rstrip()
         p = folder / f"{name}{ext}"
         if not p.exists():
             return p, v
