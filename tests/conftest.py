@@ -23,3 +23,33 @@ def db(tmp_path):
     engine, SessionLocal = open_database(tmp_path / "data" / "data.db")
     yield SessionLocal
     engine.dispose()
+
+
+_APP = None
+
+
+@pytest.fixture(scope="session")
+def _qt_app():
+    """One QApplication for the whole run, kept referenced until the very end (a QApplication
+    destroyed while widgets still exist crashes at interpreter exit)."""
+    global _APP
+    from app.ui.app import create_app, load_fonts
+    _APP = create_app(["test"])
+    load_fonts(_APP)
+    yield _APP
+    _APP.closeAllWindows()
+    _APP.processEvents()
+
+
+@pytest.fixture
+def qapp(_qt_app, monkeypatch):
+    from PySide6.QtGui import QDesktopServices
+    from PySide6.QtWidgets import QApplication
+    monkeypatch.setattr(QDesktopServices, "openUrl", staticmethod(lambda url: True))
+    yield _qt_app
+    for w in QApplication.topLevelWidgets():
+        w.close()
+        w.deleteLater()
+    from PySide6.QtCore import QCoreApplication, QEvent
+    QCoreApplication.sendPostedEvents(None, QEvent.DeferredDelete)
+    _qt_app.processEvents()

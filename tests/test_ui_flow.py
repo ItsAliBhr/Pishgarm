@@ -7,14 +7,6 @@ from sqlalchemy import select
 pytest.importorskip("PySide6")
 
 
-@pytest.fixture
-def qapp(monkeypatch):
-    from PySide6.QtGui import QDesktopServices
-    from app.ui.app import create_app, load_fonts
-    monkeypatch.setattr(QDesktopServices, "openUrl", staticmethod(lambda url: True))
-    app = create_app(["test"])
-    load_fonts(app)
-    return app
 
 
 def _issuer(db, code):
@@ -85,7 +77,7 @@ def test_draft_autosaved_and_reopened(qapp, db):
     w = DocumentWizard(db, preset={"kind": "attachment_list", "issuer_id": _issuer(db, "PERSONAL")})
     w.go(3)
     w.list_title.setText("لیست اقلام سیستم سوخت")
-    w.close()
+    w.reject()   # X / Esc / «بستن» all end here and save the draft
     with db() as s:
         d = s.scalars(select(Document)).first()
         assert d.status == "draft" and d.list_title == "لیست اقلام سیستم سوخت"

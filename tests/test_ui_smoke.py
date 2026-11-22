@@ -6,12 +6,6 @@ pytest.importorskip("PySide6")
 from PySide6.QtCore import Qt  # noqa: E402
 
 
-@pytest.fixture
-def qapp():
-    from app.ui.app import create_app, load_fonts
-    app = create_app(["test"])
-    load_fonts(app)
-    return app
 
 
 def test_main_window_rtl_and_parties(qapp, db):

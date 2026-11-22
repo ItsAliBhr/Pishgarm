@@ -135,7 +135,8 @@ class DocumentWizard(QDialog):
         self.save_btn = QPushButton("ذخیره‌ی پیش‌نویس")
         self.save_btn.clicked.connect(lambda: (self.collect(), self.save(), info(self, "پیش‌نویس ذخیره شد.")))
         close = QPushButton("بستن")
-        close.clicked.connect(self.close)
+        close.setToolTip("پیش‌نویس ذخیره می‌شود و از صفحه‌ی «اسناد» قابل ادامه است.")
+        close.clicked.connect(self.reject)
         bottom = QHBoxLayout()
         bottom.addWidget(close)
         bottom.addWidget(self.save_btn)
@@ -1256,12 +1257,13 @@ class DocumentWizard(QDialog):
         else:
             self.summary_issues.set_issues([])
 
-    def closeEvent(self, e):
-        if not self.issued and self.draft is not None:
-            self.collect()
-            self.save()
-        super().closeEvent(e)
-
     def reject(self):
-        if self.issued or self.draft is None or confirm(self, "پنجره بسته شود؟ پیش‌نویس ذخیره می‌شود و از صفحه‌ی «اسناد» قابل ادامه است."):
-            self.close()
+        """Close (X, Esc or «بستن»): the draft is saved, so nothing is lost and no question is needed."""
+        if not self.issued and self.draft is not None:
+            try:
+                self.collect()
+                self.save()
+            except Exception:  # never block closing; the last autosave is still there
+                import logging
+                logging.getLogger(__name__).exception("saving draft on close failed")
+        super().reject()
