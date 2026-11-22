@@ -162,3 +162,10 @@ def test_versioned_path_long_folder(tmp_path):
         seen.add(p)
         p.write_text("x")
     assert v == 4 and p.name.endswith(" -v4.docx")
+
+
+def test_versioned_path_keeps_tag(tmp_path):
+    deep = tmp_path.joinpath(*(["پوشه‌ی بسیار طولانی مشتری"] * 6))
+    deep.mkdir(parents=True)
+    p, _ = versioned_path(deep, "پیش‌فاکتور فولاد ناب تبریز سیستم سوخت‌رسانی 405901 14050901", ".pdf", tag=" (کامل)")
+    assert p.name.endswith(" (کامل).pdf")

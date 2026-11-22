@@ -30,15 +30,15 @@ def base_file_name(kind: str, party_short_name: str, number: str, d: date, subje
     return safe_name(" ".join(p for p in parts if p))
 
 
-def versioned_path(folder: Path, base: str, ext: str, version: int = 1) -> tuple[Path, int]:
+def versioned_path(folder: Path, base: str, ext: str, version: int = 1, tag: str = "") -> tuple[Path, int]:
     """First free path at or above `version`: «base.docx», «base -v2.docx», … Never an existing file.
     A long base is shortened first, so the « -vN» suffix always survives and the loop ends."""
     folder = Path(folder)
     v = max(int(version), 1)
-    room = max(MAX_PATH - len(str(folder)) - len(ext) - 10, 20)   # 10 = separator + « -v999»
+    room = max(MAX_PATH - len(str(folder)) - len(ext) - len(tag) - 10, 20)   # 10 = separator + « -v999»
     base = base[:room].rstrip() or "سند"
     while True:
-        name = base if v == 1 else f"{base} -v{v}"
+        name = (base if v == 1 else f"{base} -v{v}") + tag   # tag such as « (کامل)» is never cut
         p = folder / f"{name}{ext}"
         if not p.exists():
             return p, v

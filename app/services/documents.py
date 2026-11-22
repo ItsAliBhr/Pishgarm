@@ -514,7 +514,7 @@ def make_full_pdf(s: Session, doc_id: int) -> Path:
                 p = pdf_tools.erase_regions(p, work / f"{i}-erased.pdf", regions)
             parts.append(p)
     docx_path = Path(docx.path)
-    out, _ = versioned_path(docx_path.parent, docx_path.stem + " (کامل)", ".pdf")
+    out, _ = versioned_path(docx_path.parent, docx_path.stem, ".pdf", tag=" (کامل)")
     pdf_tools.merge_same_size(parts, out)
     doc.files.append(DocumentFile(role="merged_pdf", path=str(out), version=docx.version, sha256=_sha(out)))
     s.commit()
@@ -603,8 +603,8 @@ def register_final(s: Session, doc_id: int, source: Path) -> Path:
     folder = doc_folder(s, doc)
     folder.mkdir(parents=True, exist_ok=True)
     short = (doc.party.short_name or doc.party.name) if doc.party else ""
-    base = base_file_name(doc.kind, short, doc.number, doc.date_greg, doc.subject if doc.kind == "letter" else "") + " (نهایی)"
-    dest, _ = versioned_path(folder, base, source.suffix.lower())
+    base = base_file_name(doc.kind, short, doc.number, doc.date_greg, doc.subject if doc.kind == "letter" else "")
+    dest, _ = versioned_path(folder, base, source.suffix.lower(), tag=" (نهایی)")
     shutil.copy2(source, dest)
     doc.files.append(DocumentFile(role="final", path=str(dest), version=doc.version or 1, sha256=_sha(dest)))
     audit(s, "final_file", "document", doc.id, str(dest))
