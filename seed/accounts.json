@@ -1,0 +1,9 @@
+[
+  {"code":"SADERAT_COMPANY","issuer_code":"COMPANY","bank":"صادرات","branch":"شعبه سیمین اصفهان","holder":"شرکت پیشگرم سازان فولاد ایرانیان","iban":"IR740190000000118420332008","account_no":"","card_no":"","active":true,"verified_checksum":true,"usage_count_in_archive":14},
+  {"code":"TEJARAT_BAHRAMI_29","issuer_code":"PERSONAL","bank":"تجارت","branch":"","holder":"قربانعلی بهرامی","iban":"IR290180000000004464631858","account_no":"","card_no":"","active":true,"verified_checksum":true,"usage_count_in_archive":19},
+  {"code":"TEJARAT_BAHRAMI_82","issuer_code":"PERSONAL","bank":"تجارت","branch":"","holder":"قربانعلی بهرامی","iban":"IR820180000000344646318580","account_no":"","card_no":"","active":true,"verified_checksum":true,"usage_count_in_archive":8,"notes":"در بعضی فایل‌ها بدون IR یا با یک رقم کم (IR80...) نوشته شده؛ شکل درست همین است."},
+  {"code":"MELLI_BAHRAMI_25","issuer_code":"PERSONAL","bank":"ملی","branch":"","holder":"قربانعلی بهرامی","iban":"IR250170000000366402473000","account_no":"","card_no":"","active":true,"verified_checksum":true,"usage_count_in_archive":2},
+  {"code":"MELLI_BAHRAMI_61","issuer_code":"PERSONAL","bank":"ملی","branch":"","holder":"قربانعلی بهرامی","iban":"IR610170000000100257896009","account_no":"","card_no":"","active":false,"verified_checksum":true,"usage_count_in_archive":1,"notes":"فقط در نامه‌ی 1401؛ فعال بودنش را بپرسید."},
+  {"code":"SAMAN_ALI_BAHRAMI","issuer_code":"PERSONAL","bank":"سامان","branch":"","holder":"علی بهرامی","iban":"IR180560611828005145147301","account_no":"","card_no":"","active":true,"verified_checksum":true,"usage_count_in_archive":5},
+  {"code":"TEJARAT_HATAMI","issuer_code":"PERSONAL","bank":"تجارت","branch":"","holder":"داوود حاتمی","iban":"IR060180000000004449608912","account_no":"","card_no":"","active":false,"verified_checksum":true,"usage_count_in_archive":1,"notes":"شریک در پیش‌فاکتور 1401 صبا زاگرس (فروشنده‌ی دونفره)."}
+]

@@ -1,0 +1,842 @@
+[
+ {
+  "code": "SARMAD",
+  "kind": "company",
+  "name": "شرکت صنایع آهن و فولاد سرمد ابرکوه",
+  "short_name": "سرمد ابرکوه",
+  "archive_folder": "سرمد",
+  "national_id": "10320859743",
+  "economic_code": "411434561898",
+  "registration_no": "436413",
+  "address": "تهران، شهرک قدس، خیابان شهید برادران کریمی رامشه، خیابان توحید یکم، پلاک 14، ساختمان ویژن، طبقه اول",
+  "postal_code": "1466993661",
+  "phone": "",
+  "contacts": [
+   {
+    "title": "مهندس",
+    "name": "شهسواری",
+    "position": ""
+   },
+   {
+    "title": "مهندس",
+    "name": "حیدری",
+    "position": "مدیرعامل"
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "code": "GOLGOHAR_NAZM",
+  "kind": "company",
+  "name": "شرکت نظم‌آوران صنعت و معدن گل‌گهر",
+  "short_name": "نظم‌آوران گل‌گهر (فولاد بردسیر)",
+  "archive_folder": "فولاد بردسیر",
+  "national_id": "14005454760",
+  "economic_code": "411493371137",
+  "registration_no": "3934",
+  "address": "استان کرمان، شهر سیرجان، نیروی انتظامی، کوچه عباس رضوی، بن‌بست امیر زیدآبادی، طبقه همکف",
+  "postal_code": "7817839446",
+  "phone": "",
+  "contacts": [
+   {
+    "title": "",
+    "name": "آذرنگ",
+    "position": "مدیر بهره‌برداری فولاد بردسیر"
+   },
+   {
+    "title": "مهندس",
+    "name": "حجینی‌نژاد",
+    "position": "مدیریت امور قراردادها"
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "code": "JAHAN_SIRJAN",
+  "kind": "company",
+  "name": "جهان فولاد سیرجان (کارخانه نورد بردسیر)",
+  "short_name": "جهان فولاد سیرجان",
+  "archive_folder": "فولاد بردسیر",
+  "national_id": "10630161649",
+  "economic_code": "411377368343",
+  "registration_no": "3191",
+  "address": "استان کرمان، سیرجان، کیلومتر 50 جاده سیرجان-شیراز، کیلومتر 2 جاده اختصاصی گل‌گهر",
+  "postal_code": "7814474320",
+  "phone": "",
+  "contacts": [],
+  "notes": ""
+ },
+ {
+  "code": "PARDIS_AZ",
+  "kind": "company",
+  "name": "شرکت صنعت تجارت پردیس آذربایجان",
+  "short_name": "پردیس آذربایجان (سلفچگان)",
+  "archive_folder": "سلفچگان",
+  "national_id": "14005929520",
+  "economic_code": "411517516911",
+  "registration_no": "",
+  "address": "قم، شهرک صنعتی سلفچگان، کوی نخل، پلاک B56 و B64",
+  "postal_code": "3746139756",
+  "phone": "",
+  "contacts": [
+   {
+    "title": "دکتر",
+    "name": "مطلب‌زاده",
+    "position": "مدیرعامل"
+   },
+   {
+    "title": "مهندس",
+    "name": "مکاری",
+    "position": ""
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "code": "KHAYYAM",
+  "kind": "company",
+  "name": "شرکت خیام فولاد نیشابور",
+  "short_name": "خیام فولاد",
+  "archive_folder": "خیام",
+  "national_id": "",
+  "economic_code": "",
+  "registration_no": "",
+  "address": "",
+  "postal_code": "",
+  "phone": "",
+  "contacts": [
+   {
+    "title": "دکتر",
+    "name": "حسین‌آبادی",
+    "position": "مدیرعامل"
+   },
+   {
+    "title": "مهندس",
+    "name": "یوسف‌زاده",
+    "position": "معاون بهره‌برداری"
+   },
+   {
+    "title": "دکتر",
+    "name": "سلیمانی",
+    "position": "مدیرعامل (قبلی)"
+   }
+  ],
+  "notes": "قرارداد 1402/KSSN/1293 مورخ 12/05/1402؛ مطالبات باز."
+ },
+ {
+  "code": "RAFSANJAN",
+  "kind": "company",
+  "name": "شرکت نورد و آلیاژکاران کویر رفسنجان",
+  "short_name": "آلیاژکاران رفسنجان",
+  "archive_folder": "آلیاژکاران رفسنجان",
+  "national_id": "10630144619",
+  "economic_code": "",
+  "registration_no": "",
+  "address": "تهران، پونک شمالی، خیابان فجر دوم، پلاک 39، واحد 2",
+  "postal_code": "1476955192",
+  "phone": "",
+  "contacts": [
+   {
+    "title": "مهندس",
+    "name": "شارعی",
+    "position": "مدیرعامل"
+   },
+   {
+    "title": "مهندس",
+    "name": "میرزایی",
+    "position": ""
+   }
+  ],
+  "notes": "قرارداد 1402--0257 نسوزکاری کوره."
+ },
+ {
+  "code": "SEPID_FARAB",
+  "kind": "company",
+  "name": "شرکت تولیدی فولاد سپید فراب کویر کاشان",
+  "short_name": "سپید فراب کویر",
+  "archive_folder": "کویر کاشان",
+  "national_id": "",
+  "economic_code": "",
+  "registration_no": "",
+  "address": "استان اصفهان، آران و بیدگل، جاده عباس‌آباد، بعد از پادگان شهید کبریایی",
+  "postal_code": "",
+  "phone": "",
+  "contacts": [
+   {
+    "title": "مهندس",
+    "name": "طوروسیان",
+    "position": ""
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "code": "KAVIR_KASHAN",
+  "kind": "company",
+  "name": "شرکت فولاد کویر کاشان",
+  "short_name": "فولاد کویر کاشان",
+  "archive_folder": "کویر کاشان",
+  "national_id": "",
+  "economic_code": "",
+  "registration_no": "",
+  "address": "",
+  "postal_code": "",
+  "phone": "",
+  "contacts": [
+   {
+    "title": "مهندس",
+    "name": "مقضی",
+    "position": ""
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "code": "NAB_TABRIZ",
+  "kind": "company",
+  "name": "شرکت فولاد ناب تبریز",
+  "short_name": "فولاد ناب",
+  "archive_folder": "ناب تبریز",
+  "national_id": "",
+  "economic_code": "",
+  "registration_no": "",
+  "address": "تبریز، جاده تبریز-آذرشهر، شهرک صنعتی شهید سلیمی، شماره 36/4",
+  "postal_code": "5375184385",
+  "phone": "041-34328500-8",
+  "contacts": [
+   {
+    "title": "",
+    "name": "کاظم‌الحسینی",
+    "position": "مدیر بازرگانی"
+   },
+   {
+    "title": "",
+    "name": "انتظاری",
+    "position": ""
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "code": "TIKMEH_DASH",
+  "kind": "company",
+  "name": "شرکت صنایع فولاد کاوه تیکمه داش",
+  "short_name": "تیکمه داش",
+  "archive_folder": "تیکمه داش",
+  "national_id": "10860054775",
+  "economic_code": "",
+  "registration_no": "353",
+  "address": "تبریز، اتوبان پاسداران، روبروی مجتمع لاله پارک، نبش خیابان استاد میرعلی تبریزی",
+  "postal_code": "",
+  "phone": "",
+  "contacts": [
+   {
+    "title": "خانم",
+    "name": "شیدا ضراب",
+    "position": "مدیرعامل"
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "code": "ALIAJI_ESF",
+  "kind": "company",
+  "name": "شرکت صنعت فولاد آلیاژی اصفهان (مبارکه)",
+  "short_name": "آلیاژی اصفهان",
+  "archive_folder": "آلیاژی مبارکه",
+  "national_id": "",
+  "economic_code": "",
+  "registration_no": "",
+  "address": "",
+  "postal_code": "",
+  "phone": "",
+  "contacts": [
+   {
+    "title": "مهندس",
+    "name": "بهمن تاکی",
+    "position": ""
+   }
+  ],
+  "notes": "پروژه اورهال کوره پیشگرم؛ ضمانت‌نامه‌ها."
+ },
+ {
+  "code": "ALIAJI_YAZD",
+  "kind": "company",
+  "name": "شرکت فولاد آلیاژی یزد",
+  "short_name": "آلیاژی یزد",
+  "archive_folder": "آلیاژی یزد",
+  "national_id": "",
+  "economic_code": "",
+  "registration_no": "",
+  "address": "",
+  "postal_code": "",
+  "phone": "",
+  "contacts": [],
+  "notes": ""
+ },
+ {
+  "code": "BAFGH",
+  "kind": "company",
+  "name": "مجتمع معدنی و صنعت آهن و فولاد بافق",
+  "short_name": "فولاد بافق",
+  "archive_folder": "بافق",
+  "national_id": "",
+  "economic_code": "",
+  "registration_no": "404787",
+  "address": "تهران، خیابان شهید خالد اسلامبولی (وزراء)، نبش کوچه 17 (شهید بهزاد شفق)، پلاک 26",
+  "postal_code": "1513833411",
+  "phone": "021-8747",
+  "contacts": [
+   {
+    "title": "",
+    "name": "شکوهی",
+    "position": "مدیریت بازرگانی و امور قراردادها"
+   },
+   {
+    "title": "مهندس",
+    "name": "ترابی",
+    "position": ""
+   }
+  ],
+  "notes": "قرارداد 99-R-SER-93-0354 مورخ 99/12/23 (شخصی)."
+ },
+ {
+  "code": "SPADAN_HAVASAZ",
+  "kind": "company",
+  "name": "شرکت اسپادان هواساز آویژه",
+  "short_name": "اسپادان هواساز",
+  "archive_folder": "کریمی هواساز",
+  "national_id": "",
+  "economic_code": "",
+  "registration_no": "",
+  "address": "",
+  "postal_code": "",
+  "phone": "",
+  "contacts": [
+   {
+    "title": "مهندس",
+    "name": "کریمی",
+    "position": ""
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "code": "AVANGAN",
+  "kind": "company",
+  "name": "شرکت آونگان نوید مرکزی (اراک)",
+  "short_name": "آونگان نوید",
+  "archive_folder": "آونگان نوید مرکزی",
+  "national_id": "",
+  "economic_code": "",
+  "registration_no": "",
+  "address": "",
+  "postal_code": "",
+  "phone": "",
+  "contacts": [
+   {
+    "title": "مهندس",
+    "name": "راونجی",
+    "position": ""
+   },
+   {
+    "title": "مهندس",
+    "name": "بهرامیان",
+    "position": ""
+   },
+   {
+    "title": "مهندس",
+    "name": "هاشمی",
+    "position": ""
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "code": "KIMIA",
+  "kind": "company",
+  "name": "شرکت کیمیا فولاد",
+  "short_name": "کیمیا فولاد",
+  "archive_folder": "سایر و شخصی",
+  "national_id": "",
+  "economic_code": "",
+  "registration_no": "",
+  "address": "",
+  "postal_code": "",
+  "phone": "",
+  "contacts": [
+   {
+    "title": "مهندس",
+    "name": "ابوذری",
+    "position": ""
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "code": "NEGIN_ARDAKAN",
+  "kind": "company",
+  "name": "شرکت فولاد نگین اردکان",
+  "short_name": "نگین اردکان",
+  "archive_folder": "سایر و شخصی",
+  "national_id": "",
+  "economic_code": "",
+  "registration_no": "",
+  "address": "",
+  "postal_code": "",
+  "phone": "",
+  "contacts": [
+   {
+    "title": "مهندس",
+    "name": "فقیهی",
+    "position": "مدیرعامل"
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "code": "KAVEH_ARIA",
+  "kind": "company",
+  "name": "شرکت کاوه فولاد آریا",
+  "short_name": "کاوه فولاد آریا",
+  "archive_folder": "فولاد آریا",
+  "national_id": "",
+  "economic_code": "",
+  "registration_no": "",
+  "address": "",
+  "postal_code": "",
+  "phone": "",
+  "contacts": [
+   {
+    "title": "مهندس",
+    "name": "سجاد",
+    "position": ""
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "code": "FOOLAD_ESF",
+  "kind": "company",
+  "name": "شرکت فولاد اصفهان",
+  "short_name": "فولاد اصفهان",
+  "archive_folder": "سایر و شخصی",
+  "national_id": "",
+  "economic_code": "",
+  "registration_no": "",
+  "address": "",
+  "postal_code": "",
+  "phone": "",
+  "contacts": [
+   {
+    "title": "مهندس",
+    "name": "ملکیان",
+    "position": ""
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "code": "ARDESTAN",
+  "kind": "company",
+  "name": "شرکت فولاد اردستان",
+  "short_name": "فولاد اردستان",
+  "archive_folder": "سایر و شخصی",
+  "national_id": "",
+  "economic_code": "",
+  "registration_no": "",
+  "address": "",
+  "postal_code": "",
+  "phone": "",
+  "contacts": [
+   {
+    "title": "",
+    "name": "ساوجی",
+    "position": ""
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "code": "PARGAS",
+  "kind": "company",
+  "name": "شرکت پرگاس استیل",
+  "short_name": "پرگاس استیل",
+  "archive_folder": "دهدشتی",
+  "national_id": "",
+  "economic_code": "",
+  "registration_no": "",
+  "address": "",
+  "postal_code": "",
+  "phone": "",
+  "contacts": [],
+  "notes": ""
+ },
+ {
+  "code": "KHORRAMABAD",
+  "kind": "company",
+  "name": "شرکت فولاد خرم آباد",
+  "short_name": "فولاد خرم آباد",
+  "archive_folder": "خرم آباد",
+  "national_id": "",
+  "economic_code": "",
+  "registration_no": "",
+  "address": "",
+  "postal_code": "",
+  "phone": "",
+  "contacts": [],
+  "notes": ""
+ },
+ {
+  "code": "DEHSHIR",
+  "kind": "company",
+  "name": "شرکت فولاد دهشیر",
+  "short_name": "فولاد دهشیر",
+  "archive_folder": "سایر و شخصی",
+  "national_id": "",
+  "economic_code": "",
+  "registration_no": "",
+  "address": "",
+  "postal_code": "",
+  "phone": "",
+  "contacts": [],
+  "notes": ""
+ },
+ {
+  "code": "FOOLAD_YAZD",
+  "kind": "company",
+  "name": "شرکت فولاد یزد",
+  "short_name": "فولاد یزد",
+  "archive_folder": "فولاد یزد",
+  "national_id": "",
+  "economic_code": "",
+  "registration_no": "",
+  "address": "",
+  "postal_code": "",
+  "phone": "",
+  "contacts": [],
+  "notes": ""
+ },
+ {
+  "code": "NATANZ",
+  "kind": "company",
+  "name": "شرکت فولاد نطنز",
+  "short_name": "فولاد نطنز",
+  "archive_folder": "نطنز",
+  "national_id": "",
+  "economic_code": "",
+  "registration_no": "",
+  "address": "",
+  "postal_code": "",
+  "phone": "",
+  "contacts": [],
+  "notes": ""
+ },
+ {
+  "code": "ESF_DAR",
+  "kind": "company",
+  "name": "شرکت فولاد اصفهان در",
+  "short_name": "اصفهان در",
+  "archive_folder": "اصفهان در",
+  "national_id": "",
+  "economic_code": "",
+  "registration_no": "",
+  "address": "",
+  "postal_code": "",
+  "phone": "",
+  "contacts": [],
+  "notes": ""
+ },
+ {
+  "code": "SABA_ZAGROS",
+  "kind": "company",
+  "name": "شرکت صبا فولاد زاگرس",
+  "short_name": "صبا زاگرس",
+  "archive_folder": "زاگرس",
+  "national_id": "",
+  "economic_code": "",
+  "registration_no": "",
+  "address": "چهارمحال و بختیاری، شهرک صنعتی سفید دشت",
+  "postal_code": "",
+  "phone": "",
+  "contacts": [
+   {
+    "title": "مهندس",
+    "name": "زمانی",
+    "position": "مدیر بازرگانی"
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "code": "SABA_MANZOOMEH",
+  "kind": "company",
+  "name": "مجتمع صبا فولاد منظومه",
+  "short_name": "صبا منظومه",
+  "archive_folder": "",
+  "national_id": "",
+  "economic_code": "",
+  "registration_no": "",
+  "address": "شهرک صنعتی سه راه مبارکه، فاز 2، خیابان دهم، پلاک 1",
+  "postal_code": "",
+  "phone": "031-52374440",
+  "contacts": [],
+  "notes": ""
+ },
+ {
+  "code": "KOOBAN",
+  "kind": "company",
+  "name": "شرکت فولاد کوبان اشترجان",
+  "short_name": "فولاد کوبان",
+  "archive_folder": "آلیاژکاران رفسنجان",
+  "national_id": "",
+  "economic_code": "",
+  "registration_no": "",
+  "address": "",
+  "postal_code": "",
+  "phone": "",
+  "contacts": [],
+  "notes": ""
+ },
+ {
+  "code": "ZOB_KERMAN",
+  "kind": "company",
+  "name": "شرکت ذوب آهن و نورد کرمان",
+  "short_name": "ذوب کرمان",
+  "archive_folder": "ذوب کرمان",
+  "national_id": "",
+  "economic_code": "",
+  "registration_no": "",
+  "address": "",
+  "postal_code": "",
+  "phone": "",
+  "contacts": [],
+  "notes": ""
+ },
+ {
+  "code": "SHAYESTEH",
+  "kind": "company",
+  "name": "شرکت شایسته فولاد آسیا",
+  "short_name": "شایسته فولاد",
+  "archive_folder": "شایسته فولاد",
+  "national_id": "",
+  "economic_code": "",
+  "registration_no": "",
+  "address": "",
+  "postal_code": "",
+  "phone": "",
+  "contacts": [],
+  "notes": ""
+ },
+ {
+  "code": "BANDAR_KOOSHAN",
+  "kind": "company",
+  "name": "شرکت بندار کوشان زاگرس",
+  "short_name": "بندار کوشان",
+  "archive_folder": "CV_PFI",
+  "national_id": "",
+  "economic_code": "",
+  "registration_no": "",
+  "address": "",
+  "postal_code": "",
+  "phone": "",
+  "contacts": [],
+  "notes": ""
+ },
+ {
+  "code": "SHIRAZ_HASANPOUR",
+  "kind": "person",
+  "name": "مهندس حسن‌پور (شیراز)",
+  "short_name": "حسن‌پور",
+  "archive_folder": "شیراز",
+  "national_id": "",
+  "economic_code": "",
+  "registration_no": "",
+  "address": "",
+  "postal_code": "",
+  "phone": "",
+  "contacts": [
+   {
+    "title": "مهندس",
+    "name": "حسن‌پور",
+    "position": ""
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "code": "ALBORZ_IRANIAN",
+  "kind": "company",
+  "name": "شرکت فولاد البرز ایرانیان",
+  "short_name": "فولاد البرز",
+  "archive_folder": "",
+  "national_id": "",
+  "economic_code": "",
+  "registration_no": "",
+  "address": "",
+  "postal_code": "",
+  "phone": "",
+  "contacts": [
+   {
+    "title": "",
+    "name": "فرحی",
+    "position": ""
+   },
+   {
+    "title": "مهندس",
+    "name": "خرمی",
+    "position": ""
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "code": "ALMAS_YAZD",
+  "kind": "company",
+  "name": "شرکت فولاد الماس یزد",
+  "short_name": "الماس یزد",
+  "archive_folder": "",
+  "national_id": "",
+  "economic_code": "",
+  "registration_no": "",
+  "address": "",
+  "postal_code": "",
+  "phone": "",
+  "contacts": [
+   {
+    "title": "مهندس",
+    "name": "نوعی",
+    "position": ""
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "code": "JAHAN_GHARB",
+  "kind": "company",
+  "name": "شرکت جهان فولاد غرب",
+  "short_name": "جهان فولاد غرب",
+  "archive_folder": "",
+  "national_id": "",
+  "economic_code": "",
+  "registration_no": "",
+  "address": "",
+  "postal_code": "",
+  "phone": "",
+  "contacts": [
+   {
+    "title": "مهندس",
+    "name": "رحیمی",
+    "position": ""
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "code": "FARATARH",
+  "kind": "company",
+  "name": "شرکت فراطرح فولاد",
+  "short_name": "فراطرح فولاد",
+  "archive_folder": "",
+  "national_id": "",
+  "economic_code": "",
+  "registration_no": "",
+  "address": "",
+  "postal_code": "",
+  "phone": "",
+  "contacts": [
+   {
+    "title": "دکتر",
+    "name": "خداوردی",
+    "position": ""
+   },
+   {
+    "title": "مهندس",
+    "name": "شریف",
+    "position": ""
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "code": "FOOLAD_KERMAN",
+  "kind": "company",
+  "name": "شرکت فولاد کرمان",
+  "short_name": "فولاد کرمان",
+  "archive_folder": "",
+  "national_id": "",
+  "economic_code": "",
+  "registration_no": "",
+  "address": "",
+  "postal_code": "",
+  "phone": "",
+  "contacts": [
+   {
+    "title": "مهندس",
+    "name": "حیدری",
+    "position": "مدیرعامل"
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "code": "FOOLAD_KERMANSHAH",
+  "kind": "company",
+  "name": "شرکت فولاد کرمانشاه",
+  "short_name": "فولاد کرمانشاه",
+  "archive_folder": "",
+  "national_id": "",
+  "economic_code": "",
+  "registration_no": "",
+  "address": "",
+  "postal_code": "",
+  "phone": "",
+  "contacts": [],
+  "notes": ""
+ },
+ {
+  "code": "BANK_SADERAT_MOBARAKEH",
+  "kind": "bank",
+  "name": "بانک صادرات ایران، شعبه انقلاب مبارکه (کد 3770)",
+  "short_name": "صادرات مبارکه",
+  "archive_folder": "آلیاژی مبارکه",
+  "national_id": "",
+  "economic_code": "",
+  "registration_no": "",
+  "address": "",
+  "postal_code": "",
+  "phone": "",
+  "contacts": [],
+  "notes": ""
+ },
+ {
+  "code": "BANK_EGHTESAD_MOBARAKEH",
+  "kind": "bank",
+  "name": "بانک اقتصاد نوین، شعبه مبارکه (کد 1351)",
+  "short_name": "اقتصاد نوین مبارکه",
+  "archive_folder": "آلیاژی مبارکه",
+  "national_id": "",
+  "economic_code": "",
+  "registration_no": "",
+  "address": "",
+  "postal_code": "",
+  "phone": "",
+  "contacts": [],
+  "notes": ""
+ },
+ {
+  "code": "TAMIN_RAFSANJAN",
+  "kind": "government",
+  "name": "سازمان تأمین اجتماعی، شعبه رفسنجان",
+  "short_name": "تأمین اجتماعی رفسنجان",
+  "archive_folder": "آلیاژکاران رفسنجان",
+  "national_id": "",
+  "economic_code": "",
+  "registration_no": "",
+  "address": "",
+  "postal_code": "",
+  "phone": "",
+  "contacts": [],
+  "notes": ""
+ }
+]

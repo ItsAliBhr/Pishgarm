@@ -1,0 +1,732 @@
+[
+ {
+  "code": "PAY_ADV",
+  "group": "payment",
+  "text": "{advance_percent}% مبلغ کل معادل {advance_amount} ریال به عنوان پیش‌پرداخت پس از امضا و تأیید پیش‌فاکتور به فروشنده پرداخت می‌گردد.",
+  "variables": {
+   "advance_percent": {
+    "type": "percent",
+    "default": 60
+   }
+  },
+  "applies_to": [
+   "proforma",
+   "invoice"
+  ],
+  "default_for_issuers": [
+   "PERSONAL",
+   "COMPANY"
+  ],
+  "requires": {},
+  "excludes": [],
+  "source": "پیش‌فاکتورهای 1401-1405 (50، 60 و 75 درصد)"
+ },
+ {
+  "code": "PAY_REST_BEFORE_SHIP",
+  "group": "payment",
+  "text": "{rest_percent}% الباقی مبلغ کل معادل {rest_amount} ریال پس از آماده‌سازی کالا و قبل از ارسال به فروشنده پرداخت می‌گردد.",
+  "variables": {},
+  "applies_to": [
+   "proforma",
+   "invoice"
+  ],
+  "default_for_issuers": [],
+  "requires": {},
+  "excludes": [],
+  "source": "پیش‌فاکتورهای کالا (منظومه، فولاد ناب)"
+ },
+ {
+  "code": "PAY_REST_AFTER_WORK",
+  "group": "payment",
+  "text": "باقی‌مانده‌ی مبلغ پس از اتمام کار به فروشنده پرداخت می‌گردد.",
+  "variables": {},
+  "applies_to": [
+   "proforma",
+   "invoice"
+  ],
+  "default_for_issuers": [],
+  "requires": {},
+  "excludes": [],
+  "source": "صبا زاگرس 1401"
+ },
+ {
+  "code": "PAY_RETENTION",
+  "group": "payment",
+  "text": "{retention_percent}% مبلغ به عنوان ضمانت حسن انجام کار به مدت {retention_months} ماه نزد کارفرما نگهداری می‌شود.",
+  "variables": {
+   "retention_percent": {
+    "type": "percent",
+    "default": 10
+   },
+   "retention_months": {
+    "type": "int",
+    "default": 3
+   }
+  },
+  "applies_to": [
+   "proforma",
+   "invoice"
+  ],
+  "default_for_issuers": [],
+  "requires": {},
+  "excludes": [],
+  "source": "پیشنهاد آونگان (50/35/15) و نامه‌های آزادسازی 10%"
+ },
+ {
+  "code": "PAY_CASH",
+  "group": "payment",
+  "text": "پرداخت به صورت نقدی می‌باشد.",
+  "variables": {},
+  "applies_to": [
+   "proforma",
+   "invoice"
+  ],
+  "default_for_issuers": [],
+  "requires": {},
+  "excludes": [],
+  "source": "پیش‌فاکتورهای قطعات"
+ },
+ {
+  "code": "PAY_SPLIT_CARDS_INSTALL",
+  "group": "payment",
+  "text": "100% مبلغ کالا و {install_advance_percent}% مبلغ خدمات نصب، معادل {advance_amount} ریال، به عنوان پیش‌پرداخت همزمان با تأیید پیش‌فاکتور پرداخت می‌گردد.",
+  "variables": {
+   "install_advance_percent": {
+    "type": "percent",
+    "default": 60
+   }
+  },
+  "applies_to": [
+   "proforma",
+   "invoice"
+  ],
+  "default_for_issuers": [],
+  "requires": {},
+  "excludes": [],
+  "source": "پیش‌فاکتور کارت‌های PLC فولاد ناب (1405)"
+ },
+ {
+  "code": "PAY_TO_ACCOUNT",
+  "group": "payment",
+  "text": "خواهشمند است مبلغ فوق به شماره شبای {iban} نزد بانک {bank} به نام {holder} واریز گردد.",
+  "variables": {},
+  "applies_to": [
+   "proforma",
+   "invoice",
+   "letter"
+  ],
+  "default_for_issuers": [
+   "PERSONAL",
+   "COMPANY"
+  ],
+  "requires": {},
+  "excludes": [],
+  "source": "تقریباً همه‌ی فاکتورها؛ مقدار از حساب انتخاب‌شده پر می‌شود"
+ },
+ {
+  "code": "DEL_DAYS",
+  "group": "delivery",
+  "text": "زمان تحویل کالا {delivery_days} روز کاری پس از تأیید کتبی پیش‌فاکتور و ارائه‌ی پیش‌پرداخت می‌باشد.",
+  "variables": {
+   "delivery_days": {
+    "type": "int",
+    "default": 25
+   }
+  },
+  "applies_to": [
+   "proforma",
+   "invoice"
+  ],
+  "default_for_issuers": [],
+  "requires": {},
+  "excludes": [],
+  "source": "منظومه (25)، فولاد کرمانشاه (50)، رولیک (60)، فولاد آریا (90)"
+ },
+ {
+  "code": "DEL_SHIP_BUYER",
+  "group": "delivery",
+  "text": "هزینه‌ی بارگیری، حمل و بیمه تا مقصد بر عهده‌ی خریدار می‌باشد.",
+  "variables": {},
+  "applies_to": [
+   "proforma",
+   "invoice"
+  ],
+  "default_for_issuers": [
+   "PERSONAL",
+   "COMPANY"
+  ],
+  "requires": {},
+  "excludes": [],
+  "source": ""
+ },
+ {
+  "code": "DEL_FROM_WAREHOUSE",
+  "group": "delivery",
+  "text": "هزینه‌ی حمل از درب انبار بر عهده‌ی خریدار می‌باشد.",
+  "variables": {},
+  "applies_to": [
+   "proforma",
+   "invoice"
+  ],
+  "default_for_issuers": [],
+  "requires": {},
+  "excludes": [],
+  "source": ""
+ },
+ {
+  "code": "DEL_SHIP_INSTALL_BUYER",
+  "group": "delivery",
+  "text": "هزینه‌ی حمل و نصب بر عهده‌ی خریدار می‌باشد.",
+  "variables": {},
+  "applies_to": [
+   "proforma",
+   "invoice"
+  ],
+  "default_for_issuers": [],
+  "requires": {},
+  "excludes": [],
+  "source": ""
+ },
+ {
+  "code": "DEL_PROJECT_DURATION",
+  "group": "delivery",
+  "text": "زمان برآوردی جهت انجام پروژه {days_from} تا {days_to} روز می‌باشد.",
+  "variables": {
+   "days_from": {
+    "type": "int",
+    "default": 25
+   },
+   "days_to": {
+    "type": "int",
+    "default": 30
+   }
+  },
+  "applies_to": [
+   "proforma",
+   "invoice"
+  ],
+  "default_for_issuers": [],
+  "requires": {},
+  "excludes": [],
+  "source": "پیش‌فاکتورهای نسوزکاری سرمد، پردیس"
+ },
+ {
+  "code": "DEL_SERVICE_SCHEDULE",
+  "group": "delivery",
+  "text": "زمان اجرای خدمات با هماهنگی خریدار تعیین می‌گردد.",
+  "variables": {},
+  "applies_to": [
+   "proforma",
+   "invoice"
+  ],
+  "default_for_issuers": [],
+  "requires": {},
+  "excludes": [],
+  "source": ""
+ },
+ {
+  "code": "TAX_NET_ALL_DEDUCTIONS",
+  "group": "tax",
+  "text": "مبالغ به صورت خالص می‌باشد و کلیه‌ی کسورات قانونی بر عهده‌ی کارفرما است.",
+  "variables": {},
+  "applies_to": [
+   "proforma",
+   "invoice"
+  ],
+  "default_for_issuers": [
+   "PERSONAL"
+  ],
+  "requires": {
+   "vat_enabled": false
+  },
+  "excludes": [],
+  "source": "پرتکرارترین بند (حدود 20 بار)"
+ },
+ {
+  "code": "TAX_NET_PLUS_VAT",
+  "group": "tax",
+  "text": "مبالغ به صورت خالص می‌باشد و مبلغ {vat_percent}% ارزش افزوده به مبلغ فوق اضافه می‌گردد.",
+  "variables": {},
+  "applies_to": [
+   "proforma",
+   "invoice"
+  ],
+  "default_for_issuers": [
+   "COMPANY"
+  ],
+  "requires": {
+   "vat_enabled": true
+  },
+  "excludes": [],
+  "source": "پیش‌فاکتورهای سربرگ‌دار 1404-1405 (حدود 27 بار)"
+ },
+ {
+  "code": "TAX_INCLUDED",
+  "group": "tax",
+  "text": "مالیات بر ارزش افزوده ({vat_percent}%) در مبلغ قابل پرداخت لحاظ شده است.",
+  "variables": {},
+  "applies_to": [
+   "proforma",
+   "invoice"
+  ],
+  "default_for_issuers": [],
+  "requires": {
+   "vat_enabled": true
+  },
+  "excludes": [],
+  "source": ""
+ },
+ {
+  "code": "TAX_NOT_CALCULATED",
+  "group": "tax",
+  "text": "مالیات بر ارزش افزوده، بیمه و سایر عوارض قانونی در مبالغ فوق محاسبه نشده است و در صورت تعلق، بر عهده‌ی خریدار می‌باشد.",
+  "variables": {},
+  "applies_to": [
+   "proforma",
+   "invoice"
+  ],
+  "default_for_issuers": [],
+  "requires": {
+   "vat_enabled": false
+  },
+  "excludes": [],
+  "source": ""
+ },
+ {
+  "code": "TAX_INSURANCE",
+  "group": "tax",
+  "text": "در صورت نیاز، مفاصاحساب بیمه‌ی تأمین اجتماعی {insurance_percent}% بر عهده‌ی کارفرما می‌باشد.",
+  "variables": {
+   "insurance_percent": {
+    "type": "percent",
+    "default": 16.67
+   }
+  },
+  "applies_to": [
+   "proforma",
+   "invoice"
+  ],
+  "default_for_issuers": [
+   "COMPANY"
+  ],
+  "requires": {},
+  "excludes": [],
+  "source": "حدود 25 بار"
+ },
+ {
+  "code": "TAX_INSURANCE_REQUOTE",
+  "group": "tax",
+  "text": "در صورتی که تسویه‌حساب از سوی خریدار منوط به ارائه‌ی مفاصاحساب بیمه باشد، پیش‌فاکتور فوق باید مجدداً و با درنظرگرفتن مفاصاحساب بیمه اعلام شود؛ در غیر این صورت خریدار موظف به تسویه‌ی کامل (بدون کسر سپرده‌ی بیمه) خواهد بود.",
+  "variables": {},
+  "applies_to": [
+   "proforma",
+   "invoice"
+  ],
+  "default_for_issuers": [],
+  "requires": {},
+  "excludes": [],
+  "source": "قالب شخصی منظومه"
+ },
+ {
+  "code": "SITE_LODGING_FOOD",
+  "group": "site",
+  "text": "تأمین اسکان و غذای پرسنل پیمانکار بر عهده‌ی کارفرما می‌باشد.",
+  "variables": {},
+  "applies_to": [
+   "proforma",
+   "invoice"
+  ],
+  "default_for_issuers": [
+   "PERSONAL",
+   "COMPANY"
+  ],
+  "requires": {},
+  "excludes": [],
+  "source": "حدود 30 بار"
+ },
+ {
+  "code": "SITE_TRAVEL_FOOD",
+  "group": "site",
+  "text": "هزینه‌ی ایاب و ذهاب و غذای پیمانکار در طول مدت اجرای پروژه بر عهده‌ی کارفرما می‌باشد.",
+  "variables": {},
+  "applies_to": [
+   "proforma",
+   "invoice"
+  ],
+  "default_for_issuers": [],
+  "requires": {},
+  "excludes": [],
+  "source": ""
+ },
+ {
+  "code": "SITE_TRAVEL_LODGING_EXPERT",
+  "group": "site",
+  "text": "هزینه‌ی ایاب و ذهاب و اسکان کارشناس بر عهده‌ی کارفرما می‌باشد.",
+  "variables": {},
+  "applies_to": [
+   "proforma",
+   "invoice",
+   "letter"
+  ],
+  "default_for_issuers": [],
+  "requires": {},
+  "excludes": [],
+  "source": ""
+ },
+ {
+  "code": "SITE_FLIGHT",
+  "group": "site",
+  "text": "تهیه‌ی بلیط رفت و برگشت (هواپیما) و تأمین محل اسکان بر عهده‌ی کارفرما می‌باشد.",
+  "variables": {},
+  "applies_to": [
+   "proforma",
+   "letter"
+  ],
+  "default_for_issuers": [],
+  "requires": {},
+  "excludes": [],
+  "source": ""
+ },
+ {
+  "code": "SITE_CONSUMABLES",
+  "group": "site",
+  "text": "تأمین اقلام مصرفی و الکترود بر عهده‌ی کارفرما می‌باشد.",
+  "variables": {},
+  "applies_to": [
+   "proforma",
+   "invoice"
+  ],
+  "default_for_issuers": [],
+  "requires": {},
+  "excludes": [],
+  "source": ""
+ },
+ {
+  "code": "SITE_FORM_SHEET",
+  "group": "site",
+  "text": "تأمین ورق قالب‌بندی بر عهده‌ی کارفرما می‌باشد.",
+  "variables": {},
+  "applies_to": [
+   "proforma",
+   "invoice"
+  ],
+  "default_for_issuers": [],
+  "requires": {},
+  "excludes": [],
+  "source": ""
+ },
+ {
+  "code": "SITE_FORMWORK",
+  "group": "site",
+  "text": "تأمین جک، لوله، قالب و سایر لوازم قالب‌بندی بر عهده‌ی کارفرما می‌باشد.",
+  "variables": {},
+  "applies_to": [
+   "proforma",
+   "invoice"
+  ],
+  "default_for_issuers": [],
+  "requires": {},
+  "excludes": [],
+  "source": ""
+ },
+ {
+  "code": "SITE_LABOR",
+  "group": "site",
+  "text": "تأمین نیروی کارگری مورد نیاز در طول اجرای عملیات بر عهده‌ی کارفرما می‌باشد.",
+  "variables": {},
+  "applies_to": [
+   "proforma",
+   "invoice"
+  ],
+  "default_for_issuers": [],
+  "requires": {},
+  "excludes": [],
+  "source": ""
+ },
+ {
+  "code": "SITE_INSTALL_MATERIALS",
+  "group": "site",
+  "text": "تهیه‌ی اقلام نصب (لوله، اتصالات و کابل‌های ارتباطی) و اقلام مصرفی نصب (الکترود، سنگ و ...) بر عهده‌ی خریدار می‌باشد.",
+  "variables": {},
+  "applies_to": [
+   "proforma",
+   "invoice"
+  ],
+  "default_for_issuers": [],
+  "requires": {},
+  "excludes": [],
+  "source": ""
+ },
+ {
+  "code": "SITE_BLOWER_GAS",
+  "group": "site",
+  "text": "تأمین دمنده‌ی هوای احتراق و اقلام برقی آن (فیوز، کنتاکتور، بی‌متال و ...) و فشار گاز 2PSI با خریدار می‌باشد.",
+  "variables": {},
+  "applies_to": [
+   "proforma",
+   "invoice"
+  ],
+  "default_for_issuers": [],
+  "requires": {},
+  "excludes": [],
+  "source": "پیش‌فاکتورهای سیستم سوخت"
+ },
+ {
+  "code": "OTH_VALIDITY",
+  "group": "other",
+  "text": "مدت اعتبار این پیش‌فاکتور از زمان صدور {validity_days} روز کاری می‌باشد.",
+  "variables": {
+   "validity_days": {
+    "type": "int",
+    "default": 3
+   }
+  },
+  "applies_to": [
+   "proforma"
+  ],
+  "default_for_issuers": [
+   "PERSONAL",
+   "COMPANY"
+  ],
+  "requires": {},
+  "excludes": [],
+  "source": "1، 3، 5، 7 و 15 روز در نمونه‌ها"
+ },
+ {
+  "code": "OTH_NO_INSTALL",
+  "group": "other",
+  "text": "نصب و راه‌اندازی بر عهده‌ی فروشنده نمی‌باشد.",
+  "variables": {},
+  "applies_to": [
+   "proforma",
+   "invoice"
+  ],
+  "default_for_issuers": [],
+  "requires": {},
+  "excludes": [
+   "category:installation"
+  ],
+  "source": ""
+ },
+ {
+  "code": "OTH_WARRANTY_EQUIP",
+  "group": "other",
+  "text": "کلیه‌ی تجهیزات به مدت {warranty_months} ماه از زمان راه‌اندازی، به جز موارد آسیب در اثر ضربه یا نوسانات برق، گارانتی می‌گردد.",
+  "variables": {
+   "warranty_months": {
+    "type": "int",
+    "default": 6
+   }
+  },
+  "applies_to": [
+   "proforma",
+   "invoice"
+  ],
+  "default_for_issuers": [],
+  "requires": {},
+  "excludes": [],
+  "source": ""
+ },
+ {
+  "code": "OTH_WARRANTY_GOODS",
+  "group": "other",
+  "text": "کالا دارای {warranty_months} ماه گارانتی می‌باشد.",
+  "variables": {
+   "warranty_months": {
+    "type": "int",
+    "default": 12
+   }
+  },
+  "applies_to": [
+   "proforma",
+   "invoice"
+  ],
+  "default_for_issuers": [],
+  "requires": {},
+  "excludes": [],
+  "source": ""
+ },
+ {
+  "code": "OTH_WARRANTY_CHEQUE",
+  "group": "other",
+  "text": "بابت ضمانت گارانتی، چک به مبلغ {cheque_percent}% مبلغ فاکتور ارائه می‌گردد.",
+  "variables": {
+   "cheque_percent": {
+    "type": "percent",
+    "default": 10
+   }
+  },
+  "applies_to": [
+   "proforma",
+   "invoice"
+  ],
+  "default_for_issuers": [],
+  "requires": {},
+  "excludes": [],
+  "source": ""
+ },
+ {
+  "code": "OTH_REFRACTORY_GUARANTEE",
+  "group": "other",
+  "text": "مدت دوره‌ی تضمین نسوز {guarantee_months} ماه می‌باشد.",
+  "variables": {
+   "guarantee_months": {
+    "type": "int",
+    "default": 3
+   }
+  },
+  "applies_to": [
+   "proforma",
+   "invoice"
+  ],
+  "default_for_issuers": [],
+  "requires": {},
+  "excludes": [],
+  "source": ""
+ },
+ {
+  "code": "OTH_ESTIMATE_EXTRA",
+  "group": "other",
+  "text": "مبلغ فوق برآوردی است و در صورتی که پس از تخلیه و بازدید کوره نیاز به تعمیرات بیشتری باشد، مبلغ آن به فاکتور اضافه می‌گردد.",
+  "variables": {},
+  "applies_to": [
+   "proforma",
+   "invoice"
+  ],
+  "default_for_issuers": [],
+  "requires": {},
+  "excludes": [],
+  "source": ""
+ },
+ {
+  "code": "OTH_APPROX_WEIGHTS",
+  "group": "other",
+  "text": "تمام وزن‌ها و قیمت‌ها تقریبی و برآوردی است و قیمت نهایی پس از اتمام کار و مشخص شدن حجم تعمیرات تعیین می‌گردد.",
+  "variables": {},
+  "applies_to": [
+   "proforma",
+   "invoice"
+  ],
+  "default_for_issuers": [],
+  "requires": {},
+  "excludes": [],
+  "source": ""
+ },
+ {
+  "code": "OTH_UNFORESEEN",
+  "group": "other",
+  "text": "هزینه‌ی موارد پیش‌بینی‌نشده جداگانه اعلام می‌گردد.",
+  "variables": {},
+  "applies_to": [
+   "proforma",
+   "letter"
+  ],
+  "default_for_issuers": [],
+  "requires": {},
+  "excludes": [],
+  "source": ""
+ },
+ {
+  "code": "OTH_PLC_BY_BUYER",
+  "group": "other",
+  "text": "تأمین سیستم PLC با خریدار می‌باشد و هزینه‌ی برنامه‌نویسی در صورت نیاز جداگانه اعلام می‌گردد.",
+  "variables": {},
+  "applies_to": [
+   "proforma",
+   "invoice"
+  ],
+  "default_for_issuers": [],
+  "requires": {},
+  "excludes": [],
+  "source": ""
+ },
+ {
+  "code": "OTH_NO_HMI",
+  "group": "other",
+  "text": "HMI و کامپیوتر در قیمت‌ها دیده نشده است.",
+  "variables": {},
+  "applies_to": [
+   "proforma",
+   "invoice"
+  ],
+  "default_for_issuers": [],
+  "requires": {},
+  "excludes": [],
+  "source": ""
+ },
+ {
+  "code": "OTH_DUAL_FUEL",
+  "group": "other",
+  "text": "قیمت اعلام‌شده با فرض دوگانه‌سوز بودن مشعل‌ها محاسبه شده است.",
+  "variables": {},
+  "applies_to": [
+   "proforma",
+   "invoice"
+  ],
+  "default_for_issuers": [],
+  "requires": {},
+  "excludes": [],
+  "source": ""
+ },
+ {
+  "code": "OTH_EXPERT_AFTER_ADVANCE",
+  "group": "other",
+  "text": "حضور کارشناس و نظارت بر نصب منوط به تأیید پیش‌فاکتور و واریز پیش‌پرداخت می‌باشد.",
+  "variables": {},
+  "applies_to": [
+   "proforma",
+   "invoice"
+  ],
+  "default_for_issuers": [],
+  "requires": {},
+  "excludes": [],
+  "source": ""
+ },
+ {
+  "code": "OTH_BUYER_ITEMS",
+  "group": "note",
+  "text": "اقلامی که با رنگ دیگر مشخص شده است توسط خریدار تأمین می‌گردد.",
+  "variables": {},
+  "applies_to": [
+   "proforma",
+   "attachment"
+  ],
+  "default_for_issuers": [],
+  "requires": {},
+  "excludes": [],
+  "source": ""
+ },
+ {
+  "code": "OTH_MATERIAL_ST52",
+  "group": "other",
+  "text": "جنس متریال از ورق فولاد ST52-3 می‌باشد.",
+  "variables": {},
+  "applies_to": [
+   "proforma",
+   "invoice"
+  ],
+  "default_for_issuers": [],
+  "requires": {},
+  "excludes": [],
+  "source": ""
+ },
+ {
+  "code": "OTH_ORIGINAL",
+  "group": "other",
+  "text": "کلیه‌ی اقلام اورجینال و ساخت کشور {origin_country} می‌باشند.",
+  "variables": {
+   "origin_country": {
+    "type": "text",
+    "default": "آلمان"
+   }
+  },
+  "applies_to": [
+   "proforma",
+   "invoice"
+  ],
+  "default_for_issuers": [],
+  "requires": {},
+  "excludes": [],
+  "source": ""
+ }
+]

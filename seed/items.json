@@ -1,0 +1,497 @@
+[
+ {
+  "code": "IT001",
+  "category": "refractory",
+  "description": "تخریب و تخلیه‌ی مواد نسوز و نخاله از کوره",
+  "unit": "کیلوگرم",
+  "last_unit_price_rial": 162000,
+  "last_price_source": "کویر کاشان 1404",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT002",
+  "category": "refractory",
+  "description": "تخریب و تخلیه‌ی جرم‌ها و آجرهای آسیب‌دیده‌ی گام‌های کوره",
+  "unit": "کیلوگرم",
+  "last_unit_price_rial": 81700,
+  "last_price_source": "سرمد 1404",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT003",
+  "category": "refractory",
+  "description": "تخریب و تخلیه‌ی مواد نسوز به همراه اجرای کامل نسوز (قالب‌بندی، انکر، آجر عایق، جرم‌ریزی)",
+  "unit": "کیلوگرم",
+  "last_unit_price_rial": 570000,
+  "last_price_source": "فولاد ناب 1404",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT004",
+  "category": "refractory",
+  "description": "نصب انکرها و عایق‌کاری دیوارها و سقف کوره",
+  "unit": "مترمربع",
+  "last_unit_price_rial": 275000000,
+  "last_price_source": "کویر کاشان 1404",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT005",
+  "category": "refractory",
+  "description": "قالب‌بندی و جرم‌ریزی دیوارها و سقف",
+  "unit": "کیلوگرم",
+  "last_unit_price_rial": 350000,
+  "last_price_source": "کویر کاشان 1404",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT006",
+  "category": "refractory",
+  "description": "آجرچینی و جرم‌ریزی کف کوره",
+  "unit": "کیلوگرم",
+  "last_unit_price_rial": 212000,
+  "last_price_source": "سرمد 1404",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT007",
+  "category": "refractory",
+  "description": "نصب و جوشکاری انکرهای کف کوره و قالب‌بندی گام‌های کوره",
+  "unit": "مترطول",
+  "last_unit_price_rial": 25700000,
+  "last_price_source": "سرمد 1404",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT008",
+  "category": "refractory",
+  "description": "نصب انکرها، عایق‌کاری، قالب‌بندی و جرم‌ریزی کف کوره",
+  "unit": "کیلوگرم",
+  "last_unit_price_rial": 200000,
+  "last_price_source": "پردیس آذربایجان 1405",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT009",
+  "category": "refractory",
+  "description": "نصب بلوک‌های کف کوره",
+  "unit": "عدد",
+  "last_unit_price_rial": 33000000,
+  "last_price_source": "کویر کاشان 1404",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT010",
+  "category": "refractory",
+  "description": "آماده‌سازی محل نصب بلوک‌های فیوزکست و نصب آن‌ها",
+  "unit": "عدد",
+  "last_unit_price_rial": 23000000,
+  "last_price_source": "کویر کاشان",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT011",
+  "category": "refractory",
+  "description": "تخریب و تخلیه‌ی بلوک‌های مشعل و نصب بلوک جدید",
+  "unit": "عدد",
+  "last_unit_price_rial": 105000000,
+  "last_price_source": "سرمد 1404",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT012",
+  "category": "refractory",
+  "description": "تخریب بلوک‌های نسوز مشعل و قالب‌بندی و جرم‌ریزی هر مشعل",
+  "unit": "عدد",
+  "last_unit_price_rial": 225000000,
+  "last_price_source": "اصفهان در",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT013",
+  "category": "refractory",
+  "description": "آماده‌سازی محل طاقدیس‌ها، انکربندی، آجرچینی، قالب‌بندی و جرم‌ریزی طاقدیس",
+  "unit": "عدد",
+  "last_unit_price_rial": 1250000000,
+  "last_price_source": "سپید فراب کویر",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT014",
+  "category": "refractory",
+  "description": "نسوز پنل پیشانی بالای دریچه‌ی ورودی کوره",
+  "unit": "مجموعه",
+  "last_unit_price_rial": 800000000,
+  "last_price_source": "کویر کاشان",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT015",
+  "category": "refractory",
+  "description": "پنل نسوز داکت کوره",
+  "unit": "عدد",
+  "last_unit_price_rial": 450000000,
+  "last_price_source": "صبا زاگرس 1401",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT016",
+  "category": "refractory",
+  "description": "تخریب جرم دیواره (به ازای هر متر)",
+  "unit": "متر",
+  "last_unit_price_rial": 70000000,
+  "last_price_source": "فولاد بردسیر 1404",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT017",
+  "category": "refractory",
+  "description": "جرم‌ریزی و نسوزکاری دیوار (به ازای هر متر)",
+  "unit": "متر",
+  "last_unit_price_rial": 150000000,
+  "last_price_source": "فولاد بردسیر 1404",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT018",
+  "category": "refractory",
+  "description": "قالب‌بندی دیوار جهت جرم نسوز",
+  "unit": "متر",
+  "last_unit_price_rial": 25000000,
+  "last_price_source": "فولاد بردسیر 1404",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT019",
+  "category": "refractory",
+  "description": "چیدمان آجرهای عایق، بلانکت‌گذاری (HOT FACE / COLD FACE)",
+  "unit": "متر",
+  "last_unit_price_rial": 45000000,
+  "last_price_source": "فولاد بردسیر 1404",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT020",
+  "category": "refractory",
+  "description": "جوشکاری انکرهای دیوار و دریچه‌های پوسته‌کشی و نصب آجر انکرها",
+  "unit": "متر",
+  "last_unit_price_rial": 50000000,
+  "last_price_source": "فولاد بردسیر 1404",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT021",
+  "category": "refractory",
+  "description": "نصب بلوک‌های جدید کف کوره درون ریل‌ها (سوکینگ)",
+  "unit": "متر",
+  "last_unit_price_rial": 32000000,
+  "last_price_source": "فولاد بردسیر 1404",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT022",
+  "category": "refractory",
+  "description": "جرم‌ریزی کف کوره",
+  "unit": "متر",
+  "last_unit_price_rial": 37000000,
+  "last_price_source": "فولاد بردسیر 1404",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT023",
+  "category": "logistics",
+  "description": "انتقال نخاله‌های تخریب‌شده به خارج از سالن تولید",
+  "unit": "تن",
+  "last_unit_price_rial": 38000000,
+  "last_price_source": "فولاد بردسیر 1404",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT024",
+  "category": "refractory",
+  "description": "نسوزکاری کامل کوره پیشگرم (آجرکاری دیوار، جرم‌ریزی محل مشعل‌ها، کف گام‌ها، سقف، داکت، کانال دود و دودکش)",
+  "unit": "مجموعه",
+  "last_unit_price_rial": null,
+  "last_price_source": "کویر کاشان / رفسنجان",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT025",
+  "category": "installation",
+  "description": "نصب پیشانی گام طرح جدید شامل برشکاری، آماده‌سازی، نصب ناودانی و ورق زیر پیشانی",
+  "unit": "عدد",
+  "last_unit_price_rial": 525000000,
+  "last_price_source": "سرمد 1404",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT026",
+  "category": "installation",
+  "description": "نصب استراکچر شامل میز شارژ، رولیک‌های ورودی، رولیک‌های داخل کوره و استراکچر کوره",
+  "unit": "مجموعه",
+  "last_unit_price_rial": 14000000000,
+  "last_price_source": "فولاد و آلیاژ رفسنجان",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT027",
+  "category": "installation",
+  "description": "دمونتاژ تجهیزات خط نورد",
+  "unit": "مجموعه",
+  "last_unit_price_rial": null,
+  "last_price_source": "آلیاژکاران رفسنجان 1404",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT028",
+  "category": "goods",
+  "description": "رولیک نسوز کوره شامل بشکه (جنس 4841) و لوله‌ی آبگرد (st52)",
+  "unit": "عدد",
+  "last_unit_price_rial": null,
+  "last_price_source": "رفسنجان",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT029",
+  "category": "goods",
+  "description": "یاتاقان و رولبرینگ طبق نقشه",
+  "unit": "عدد",
+  "last_unit_price_rial": 360000000,
+  "last_price_source": "رفسنجان",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT030",
+  "category": "goods",
+  "description": "سازه‌ی گام کوره پیشگرم",
+  "unit": "عدد",
+  "last_unit_price_rial": 1100000000,
+  "last_price_source": "رفسنجان",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT031",
+  "category": "goods",
+  "description": "جک هیدرولیک",
+  "unit": "عدد",
+  "last_unit_price_rial": 250000000,
+  "last_price_source": "رفسنجان",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT032",
+  "category": "goods",
+  "description": "بلوک فیوزکست برند Treibacher آلمان (SGM 600×200×200)",
+  "unit": "تن",
+  "last_unit_price_rial": null,
+  "last_price_source": "پردیس آذربایجان 1405",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT033",
+  "category": "goods",
+  "description": "شعله‌پخش‌کن جرم نسوز",
+  "unit": "عدد",
+  "last_unit_price_rial": 25000000,
+  "last_price_source": "صبا زاگرس 1401",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT034",
+  "category": "goods",
+  "description": "فلنچ جای مشعل",
+  "unit": "عدد",
+  "last_unit_price_rial": 15000000,
+  "last_price_source": "صبا زاگرس 1401",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT035",
+  "category": "goods",
+  "description": "بلوک مشعل کوره",
+  "unit": "عدد",
+  "last_unit_price_rial": 100000000,
+  "last_price_source": "صبا زاگرس 1401",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT036",
+  "category": "goods",
+  "description": "انکر نگهدارنده‌ی نسوز",
+  "unit": "عدد",
+  "last_unit_price_rial": 4000000,
+  "last_price_source": "صبا زاگرس 1401",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT037",
+  "category": "fuel_system",
+  "description": "مشعل دوگانه‌سوز (گاز / گازوئیل) با ظرفیت حرارتی 2000 کیلووات",
+  "unit": "عدد",
+  "last_unit_price_rial": 3500000000,
+  "last_price_source": "تیکمه داش 1405",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT038",
+  "category": "fuel_system",
+  "description": "اقلام سیستم سوخت‌رسانی گازوئیل کوره پیشگرم (مطابق لیست اقلام پیوست)",
+  "unit": "مجموعه",
+  "last_unit_price_rial": 20200000000,
+  "last_price_source": "فولاد ناب 1405",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT039",
+  "category": "fuel_system",
+  "description": "اصلاحات مشعل و اقلام سیستم سوخت‌رسانی گازوئیل (مطابق نقشه‌ی P&ID پیوست)",
+  "unit": "مجموعه",
+  "last_unit_price_rial": 14000000000,
+  "last_price_source": "صبا منظومه 1405",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT040",
+  "category": "fuel_system",
+  "description": "فلومتر توربینی استیل 304 نمایشگردار، خروجی 4-20 میلی‌آمپر و RS485",
+  "unit": "عدد",
+  "last_unit_price_rial": 2100000000,
+  "last_price_source": "فولاد ناب 1405",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT041",
+  "category": "fuel_system",
+  "description": "سیستم تکمیلی کنترل کوره (اورفیس پلیت، ترانسمیتر، کنترل ولو 4-20 میلی‌آمپر) برای هر ناحیه‌ی حرارتی",
+  "unit": "مجموعه",
+  "last_unit_price_rial": null,
+  "last_price_source": "کرمانشاه / ناب",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT042",
+  "category": "automation",
+  "description": "تابلو PLC با نصب تجهیزات داخل آن، آماده‌سازی و راه‌اندازی طبق لیست",
+  "unit": "عدد",
+  "last_unit_price_rial": 9500000000,
+  "last_price_source": "سرمد 1404",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT043",
+  "category": "automation",
+  "description": "تابلو درایو با نصب درایو و ارتباط با PLC",
+  "unit": "عدد",
+  "last_unit_price_rial": 2950000000,
+  "last_price_source": "سرمد 1404",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT044",
+  "category": "automation",
+  "description": "تابلو به همراه PLC، کارت‌های آنالوگ و دیجیتال، لوازم جانبی و سیم‌کشی",
+  "unit": "عدد",
+  "last_unit_price_rial": 18500000000,
+  "last_price_source": "فولاد ناب 1404",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT045",
+  "category": "automation",
+  "description": "کارت ورودی آنالوگ زیمنس 6ES7531-7KF00-0AB0",
+  "unit": "عدد",
+  "last_unit_price_rial": 1737500000,
+  "last_price_source": "فولاد ناب 1405",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT046",
+  "category": "automation",
+  "description": "کارت خروجی آنالوگ زیمنس 6ES7532-5HF00-0AB0",
+  "unit": "عدد",
+  "last_unit_price_rial": 1787500000,
+  "last_price_source": "فولاد ناب 1405",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT047",
+  "category": "automation",
+  "description": "کانکتور جلو 6ES7592-1AM00-0XB0",
+  "unit": "عدد",
+  "last_unit_price_rial": 187500000,
+  "last_price_source": "فولاد ناب 1405",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT048",
+  "category": "automation",
+  "description": "برنامه‌نویسی و راه‌اندازی سیستم سوخت کوره",
+  "unit": "مجموعه",
+  "last_unit_price_rial": 4500000000,
+  "last_price_source": "رفسنجان 1404",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT049",
+  "category": "automation",
+  "description": "نصب و راه‌اندازی کارت‌های جدید روی PLC موجود، سیم‌بندی، پیکربندی و برنامه‌نویسی، نصب سنسورهای شعله‌ی UV",
+  "unit": "مجموعه",
+  "last_unit_price_rial": 11000000000,
+  "last_price_source": "فولاد ناب 1405",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT050",
+  "category": "consulting",
+  "description": "بازدید و مشاوره‌ی تعمیرات کوره پیشگرم",
+  "unit": "روز",
+  "last_unit_price_rial": 250000000,
+  "last_price_source": "خرم آباد / پرگاس 1404",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT051",
+  "category": "consulting",
+  "description": "ایاب و ذهاب، بازدید و مشاوره جهت تعمیرات",
+  "unit": "مجموعه",
+  "last_unit_price_rial": 400000000,
+  "last_price_source": "فولاد یزد",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT052",
+  "category": "consulting",
+  "description": "بازدید، مشاوره، طراحی و نقشه‌ی پیش‌طرح کوره / رکوپراتور",
+  "unit": "مجموعه",
+  "last_unit_price_rial": 400000000,
+  "last_price_source": "شایسته فولاد / اصفهان در",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT053",
+  "category": "consulting",
+  "description": "حضور کارشناس جهت تهیه‌ی نقشه و نظارت بر نصب",
+  "unit": "مجموعه",
+  "last_unit_price_rial": 2500000000,
+  "last_price_source": "فولاد ناب 1405",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT054",
+  "category": "consulting",
+  "description": "مشاوره‌ی فنی به ازای یک روز حضور در محل پروژه",
+  "unit": "روز",
+  "last_unit_price_rial": 250000000,
+  "last_price_source": "شیراز 1404",
+  "buyer_supplied_by_default": false
+ },
+ {
+  "code": "IT055",
+  "category": "goods",
+  "description": "جوشکاری روتور سنگ‌شکن",
+  "unit": "کیلوگرم",
+  "last_unit_price_rial": 43000000,
+  "last_price_source": "سیمان",
+  "buyer_supplied_by_default": false
+ }
+]

@@ -1,0 +1,843 @@
+[
+ {
+  "code": "QUOTE_LUMPSUM",
+  "category": "اعلام قیمت",
+  "title": "اعلام قیمت (مبلغ کلی)",
+  "subject_line": "اعلام قیمت {project_title}",
+  "body": [
+   "پیرو {reference}، هزینه‌ی {project_title} مبلغ {amount} ریال ({amount_words}) می‌باشد.",
+   "مبلغ فوق به صورت خالص می‌باشد و کسورات قانونی بر عهده‌ی کارفرما است."
+  ],
+  "fields": [
+   {
+    "name": "reference",
+    "label": "پیرو (مذاکره تلفنی / بازدید / درخواست آن شرکت)",
+    "type": "choice",
+    "required": true
+   },
+   {
+    "name": "project_title",
+    "label": "موضوع پروژه / کار",
+    "type": "text",
+    "required": true
+   },
+   {
+    "name": "amount",
+    "label": "مبلغ (ریال)",
+    "type": "money",
+    "required": true
+   }
+  ],
+  "closing": "با تشکر",
+  "with_items_table": false,
+  "with_clauses": true,
+  "with_account": false,
+  "source": "سپید فراب کویر، جهان فولاد غرب، فولاد البرز"
+ },
+ {
+  "code": "QUOTE_ITEMIZED",
+  "category": "اعلام قیمت",
+  "title": "اعلام قیمت با فهرست ردیف‌ها",
+  "subject_line": "اعلام قیمت {project_title}",
+  "body": [
+   "پیرو {reference}، پیشنهاد قیمت {project_title} به شرح ذیل خدمتتان ارائه می‌گردد:"
+  ],
+  "fields": [
+   {
+    "name": "reference",
+    "label": "پیرو",
+    "type": "choice",
+    "required": true
+   },
+   {
+    "name": "project_title",
+    "label": "موضوع پروژه / کار",
+    "type": "text",
+    "required": true
+   }
+  ],
+  "closing": "با تشکر",
+  "with_items_table": true,
+  "with_clauses": true,
+  "with_account": false,
+  "source": "اعلام قیمت رفسنجان، کوره گامی، شیراز"
+ },
+ {
+  "code": "QUOTE_UNIT_RATES",
+  "category": "اعلام قیمت",
+  "title": "اعلام قیمت واحد (هر کیلوگرم / متر / عدد)",
+  "subject_line": "اعلام قیمت واحد {project_title}",
+  "body": [
+   "احتراماً هزینه‌ی اجرای {project_title} طبق حجم اعلامی به شرح ذیل می‌باشد:"
+  ],
+  "fields": [
+   {
+    "name": "project_title",
+    "label": "موضوع پروژه / کار",
+    "type": "text",
+    "required": true
+   }
+  ],
+  "closing": "با تشکر",
+  "with_items_table": true,
+  "with_clauses": true,
+  "with_account": false,
+  "source": "کویر کاشان (هر کیلوگرم تخریب/جرم‌ریزی)"
+ },
+ {
+  "code": "QUOTE_CONSULTING_DAY",
+  "category": "اعلام قیمت",
+  "title": "اعلام هزینه‌ی مشاوره و حضور روزانه",
+  "subject_line": "اعلام هزینه‌ی مشاوره",
+  "body": [
+   "پیرو {reference}، هزینه‌ی هر روز حضور در کارخانه جهت {purpose} مبلغ {daily_rate} ریال می‌باشد.",
+   "هزینه‌ی ایاب و ذهاب و اسکان بر عهده‌ی کارفرما می‌باشد."
+  ],
+  "fields": [
+   {
+    "name": "reference",
+    "label": "پیرو",
+    "type": "choice",
+    "required": true
+   },
+   {
+    "name": "purpose",
+    "label": "هدف حضور (مشاوره، آموزش، نظارت، راه‌اندازی)",
+    "type": "text",
+    "required": true
+   },
+   {
+    "name": "daily_rate",
+    "label": "هزینه‌ی هر روز (ریال)",
+    "type": "money",
+    "required": true
+   }
+  ],
+  "closing": "با تشکر",
+  "with_items_table": false,
+  "with_clauses": false,
+  "with_account": false,
+  "source": "فولاد البرز، خیام 1402، شیراز 1404"
+ },
+ {
+  "code": "PAY_EXPERT_VISIT",
+  "category": "مالی",
+  "title": "درخواست واریز بابت حضور کارشناس",
+  "subject_line": "درخواست واریز هزینه‌ی حضور کارشناس",
+  "body": [
+   "با توجه به درخواست آن شرکت، هزینه‌ی ایاب و ذهاب و حضور {expert_count} نفر کارشناس جهت {purpose} در تاریخ {visit_date} به مبلغ {amount} ریال ({amount_words}) می‌باشد. خواهشمند است مبلغ فوق به شماره شبای {iban} نزد بانک {bank} به نام {holder} واریز گردد."
+  ],
+  "fields": [
+   {
+    "name": "expert_count",
+    "label": "تعداد کارشناس",
+    "type": "int",
+    "required": true
+   },
+   {
+    "name": "purpose",
+    "label": "موضوع حضور",
+    "type": "text",
+    "required": true
+   },
+   {
+    "name": "visit_date",
+    "label": "تاریخ حضور",
+    "type": "date",
+    "required": true
+   },
+   {
+    "name": "amount",
+    "label": "مبلغ (ریال)",
+    "type": "money",
+    "required": true
+   }
+  ],
+  "closing": "با تشکر",
+  "with_items_table": false,
+  "with_clauses": false,
+  "with_account": true,
+  "source": "فراطرح فولاد 1401"
+ },
+ {
+  "code": "PAY_ATTENDANCE_REPORT",
+  "category": "مالی",
+  "title": "اعلام روزهای حضور مشاور",
+  "subject_line": "اعلام روزهای حضور",
+  "body": [
+   "احتراماً به استحضار می‌رساند حضور اینجانب، {person_name}، به عنوان مشاور در {customer_name} از تاریخ {date_from} تا {date_to} به مدت {days} روز در کارخانه بوده است. خواهشمند است دستور اقدام لازم را بفرمایید."
+  ],
+  "fields": [
+   {
+    "name": "person_name",
+    "label": "نام شخص",
+    "type": "text",
+    "required": true
+   },
+   {
+    "name": "date_from",
+    "label": "از تاریخ",
+    "type": "date",
+    "required": true
+   },
+   {
+    "name": "date_to",
+    "label": "تا تاریخ",
+    "type": "date",
+    "required": true
+   },
+   {
+    "name": "days",
+    "label": "تعداد روز",
+    "type": "int",
+    "required": true
+   }
+  ],
+  "closing": "با تشکر",
+  "with_items_table": false,
+  "with_clauses": false,
+  "with_account": false,
+  "source": "خیام 1402/04/31"
+ },
+ {
+  "code": "PAY_INSTALLMENT",
+  "category": "مالی",
+  "title": "درخواست پرداخت مرحله / باقیمانده",
+  "subject_line": "درخواست پرداخت {stage_title}",
+  "body": [
+   "با توجه به {progress_reason}، لطفاً در مورد پرداخت {stage_title} به مبلغ {amount} ریال دستور اقدام لازم فرمایید."
+  ],
+  "fields": [
+   {
+    "name": "progress_reason",
+    "label": "دلیل (مثلاً انجام اتوماسیون و آماده بودن کوره)",
+    "type": "text",
+    "required": true
+   },
+   {
+    "name": "stage_title",
+    "label": "عنوان مرحله (مثلاً 50% باقیمانده‌ی مرحله‌ی دوم)",
+    "type": "text",
+    "required": true
+   },
+   {
+    "name": "amount",
+    "label": "مبلغ (ریال)",
+    "type": "money",
+    "required": true
+   }
+  ],
+  "closing": "با احترام",
+  "with_items_table": false,
+  "with_clauses": false,
+  "with_account": true,
+  "source": "خیام 1402/09"
+ },
+ {
+  "code": "PAY_SETTLEMENT",
+  "category": "مالی",
+  "title": "درخواست تسویه‌حساب قرارداد",
+  "subject_line": "درخواست تسویه‌حساب قرارداد شماره {contract_no} به تاریخ {contract_date}",
+  "body": [
+   "بدین‌وسیله به استحضار می‌رساند قرارداد شماره {contract_no} مورخ {contract_date} فی‌مابین آن شرکت محترم و {issuer_name}، با موضوع {project_title}، مطابق مفاد قرارداد به‌طور کامل اجرا و تعهدات قراردادی انجام شده است.",
+   "خواهشمند است دستور فرمایید در خصوص پرداخت مانده‌ی مطالبات و انجام تسویه‌حساب نهایی، اقدامات لازم معمول گردد.",
+   "پیشاپیش از توجه و همکاری جنابعالی سپاسگزاریم."
+  ],
+  "fields": [
+   {
+    "name": "contract_no",
+    "label": "شماره قرارداد",
+    "type": "text",
+    "required": false
+   },
+   {
+    "name": "contract_date",
+    "label": "تاریخ قرارداد",
+    "type": "date",
+    "required": false
+   },
+   {
+    "name": "project_title",
+    "label": "موضوع پروژه / کار",
+    "type": "text",
+    "required": true
+   }
+  ],
+  "closing": "با تشکر",
+  "with_items_table": false,
+  "with_clauses": false,
+  "with_account": true,
+  "source": "خیام 1404/09/25"
+ },
+ {
+  "code": "PAY_RETENTION_RELEASE",
+  "category": "مالی",
+  "title": "درخواست آزادسازی سپرده‌ی حسن انجام کار (10%)",
+  "subject_line": "درخواست آزادسازی سپرده‌ی حسن انجام کار",
+  "body": [
+   "به استحضار می‌رساند با عنایت به اتمام مدت مقرر ضمانت مربوط به قرارداد {contract_no} با موضوع {project_title} و پایان دوره‌ی نگهداری سپرده‌ی حسن انجام کار، خواهشمند است دستور فرمایید اقدامات لازم جهت آزادسازی و پرداخت سپرده‌ی حسن انجام کار ({retention_percent}% باقیمانده) صورت پذیرد."
+  ],
+  "fields": [
+   {
+    "name": "contract_no",
+    "label": "شماره قرارداد",
+    "type": "text",
+    "required": false
+   },
+   {
+    "name": "project_title",
+    "label": "موضوع پروژه / کار",
+    "type": "text",
+    "required": true
+   },
+   {
+    "name": "retention_percent",
+    "label": "درصد سپرده",
+    "type": "percent",
+    "required": false
+   }
+  ],
+  "closing": "با تشکر",
+  "with_items_table": false,
+  "with_clauses": false,
+  "with_account": true,
+  "source": "پردیس آذربایجان 1405، سرمد 1405، فولاد ناب 1405"
+ },
+ {
+  "code": "PAY_REFUND_ADVANCE",
+  "category": "مالی",
+  "title": "درخواست استرداد پیش‌پرداخت",
+  "subject_line": "درخواست استرداد پیش‌پرداخت",
+  "body": [
+   "احتراماً، با توجه به {reason}، خواهشمند است دستور فرمایید مبلغ {amount} ریال ({amount_words}) پیش‌پرداخت پرداخت‌شده بابت این پروژه مسترد شود."
+  ],
+  "fields": [
+   {
+    "name": "reason",
+    "label": "دلیل (مثلاً لغو پروژه)",
+    "type": "text",
+    "required": true
+   },
+   {
+    "name": "amount",
+    "label": "مبلغ (ریال)",
+    "type": "money",
+    "required": true
+   }
+  ],
+  "closing": "با تشکر",
+  "with_items_table": false,
+  "with_clauses": false,
+  "with_account": true,
+  "source": "اسپادان هواساز 1405"
+ },
+ {
+  "code": "PAY_WARNING",
+  "category": "مالی",
+  "title": "اخطار و مطالبه‌ی پرداخت",
+  "subject_line": "اخطار {warning_no} و مطالبه‌ی پرداخت مطالبات قرارداد",
+  "body": [
+   "احتراماً، پیرو نامه‌ی شماره {prev_letter_no} مورخ {prev_letter_date} و با عنایت به صورت‌وضعیت شماره {statement_no} مربوط به قرارداد شماره {contract_no} و تحویل موقت در تاریخ {handover_date} که به تأیید کارفرمای محترم رسیده است، تاکنون اقدامی در خصوص پرداخت باقیمانده‌ی مطالبات و آزادسازی سپرده‌ی حسن انجام کار صورت نپذیرفته است.",
+   "بدین‌وسیله اخطار می‌گردد حداکثر ظرف {deadline_days} روز از تاریخ ابلاغ این نامه نسبت به پرداخت کلیه‌ی مطالبات معوق اقدام فرمایید. بدیهی است در صورت عدم اقدام، این شرکت ناگزیر از پیگیری حقوق قانونی و قراردادی خود از طریق مراجع ذی‌صلاح خواهد بود و خسارات ناشی از تأخیر بر عهده‌ی آن شرکت محترم خواهد بود."
+  ],
+  "fields": [
+   {
+    "name": "warning_no",
+    "label": "اخطار (اول/دوم)",
+    "type": "choice",
+    "required": true
+   },
+   {
+    "name": "prev_letter_no",
+    "label": "شماره نامه‌ی قبلی",
+    "type": "text",
+    "required": false
+   },
+   {
+    "name": "prev_letter_date",
+    "label": "تاریخ نامه‌ی قبلی",
+    "type": "date",
+    "required": false
+   },
+   {
+    "name": "statement_no",
+    "label": "شماره صورت‌وضعیت",
+    "type": "text",
+    "required": false
+   },
+   {
+    "name": "contract_no",
+    "label": "شماره قرارداد",
+    "type": "text",
+    "required": false
+   },
+   {
+    "name": "handover_date",
+    "label": "تاریخ تحویل موقت",
+    "type": "date",
+    "required": false
+   },
+   {
+    "name": "deadline_days",
+    "label": "مهلت (روز)",
+    "type": "int",
+    "required": true
+   }
+  ],
+  "closing": "با تجدید احترام",
+  "with_items_table": false,
+  "with_clauses": false,
+  "with_account": false,
+  "source": "نظم‌آوران گل‌گهر 1405 (اخطار دوم)"
+ },
+ {
+  "code": "OPS_PERSONNEL_EQUIPMENT",
+  "category": "اجرایی",
+  "title": "اعلام نفرات اعزامی و وسایل مورد نیاز",
+  "subject_line": "اعلام نفرات و وسایل مورد نیاز",
+  "body": [
+   "پیرو مذاکرات قبلی، تعداد نفرات اعزامی و وسایل مورد نیاز جهت {project_title} به شرح ذیل اعلام می‌گردد:"
+  ],
+  "fields": [
+   {
+    "name": "project_title",
+    "label": "موضوع پروژه / کار",
+    "type": "text",
+    "required": true
+   }
+  ],
+  "closing": "با تشکر",
+  "with_items_table": true,
+  "with_clauses": false,
+  "with_account": false,
+  "source": "فولاد البرز، چین بلاک سلفچگان"
+ },
+ {
+  "code": "OPS_MATERIAL_LIST",
+  "category": "اجرایی",
+  "title": "اعلام لیست خرید مواد نسوز / متریال",
+  "subject_line": "لیست خرید متریال {project_title}",
+  "body": [
+   "{list_title} جهت {project_title} به شرح ذیل خدمتتان اعلام می‌گردد:"
+  ],
+  "fields": [
+   {
+    "name": "list_title",
+    "label": "عنوان (مثلاً لیست دوم خرید مواد نسوز)",
+    "type": "text",
+    "required": true
+   },
+   {
+    "name": "project_title",
+    "label": "موضوع پروژه / کار",
+    "type": "text",
+    "required": true
+   }
+  ],
+  "closing": "با تشکر",
+  "with_items_table": true,
+  "with_clauses": false,
+  "with_account": false,
+  "source": "آلیاژکاران رفسنجان 1402"
+ },
+ {
+  "code": "OPS_INTRODUCE_REP",
+  "category": "اجرایی",
+  "title": "معرفی نماینده / درخواست مجوز تردد",
+  "subject_line": "معرفی نماینده",
+  "body": [
+   "به استحضار می‌رساند {rep_title} {rep_name} جهت {purpose} از طرف {issuer_name} معرفی می‌گردد. {extra_request}"
+  ],
+  "fields": [
+   {
+    "name": "rep_title",
+    "label": "عنوان (جناب آقای مهندس)",
+    "type": "text",
+    "required": true
+   },
+   {
+    "name": "rep_name",
+    "label": "نام نماینده",
+    "type": "text",
+    "required": true
+   },
+   {
+    "name": "purpose",
+    "label": "هدف",
+    "type": "text",
+    "required": true
+   },
+   {
+    "name": "extra_request",
+    "label": "درخواست اضافه (مثلاً صدور مجوز تردد)",
+    "type": "text",
+    "required": false
+   }
+  ],
+  "closing": "با تشکر",
+  "with_items_table": false,
+  "with_clauses": false,
+  "with_account": false,
+  "source": "نظم‌آوران گل‌گهر 1404، رفسنجان 1402، تأمین اجتماعی"
+ },
+ {
+  "code": "OPS_STATEMENT",
+  "category": "اجرایی",
+  "title": "ارسال صورت‌وضعیت",
+  "subject_line": "صورت‌وضعیت {project_title}",
+  "body": [
+   "به استحضار می‌رساند صورت‌وضعیت {project_title} آن شرکت به شرح ذیل می‌باشد. خواهشمند است دستور فرمایید مبلغ این بخش از قرارداد پرداخت گردد."
+  ],
+  "fields": [
+   {
+    "name": "project_title",
+    "label": "موضوع پروژه / کار",
+    "type": "text",
+    "required": true
+   },
+   {
+    "name": "contract_no",
+    "label": "شماره قرارداد",
+    "type": "text",
+    "required": false
+   }
+  ],
+  "closing": "با تشکر",
+  "with_items_table": true,
+  "with_clauses": false,
+  "with_account": true,
+  "source": "سرمد، پردیس، صبا زاگرس"
+ },
+ {
+  "code": "OPS_GOOD_PERFORMANCE_CERT",
+  "category": "اجرایی",
+  "title": "درخواست صدور گواهی حسن انجام کار",
+  "subject_line": "درخواست صدور گواهی حسن انجام کار",
+  "body": [
+   "احتراماً به استحضار می‌رساند پروژه‌ی {project_title} به پایان رسیده و تحویل کارفرما شده است.",
+   "نظر به اتمام پروژه، خواهشمند است دستور فرمایید گواهی حسن انجام کار مرتبط صادر و به این مجموعه ارائه گردد."
+  ],
+  "fields": [
+   {
+    "name": "project_title",
+    "label": "موضوع پروژه / کار",
+    "type": "text",
+    "required": true
+   }
+  ],
+  "closing": "با تشکر",
+  "with_items_table": false,
+  "with_clauses": false,
+  "with_account": false,
+  "source": "فولاد ناب و رفسنجان 1404"
+ },
+ {
+  "code": "OPS_TEMP_HANDOVER",
+  "category": "اجرایی",
+  "title": "صورت‌جلسه‌ی تحویل موقت",
+  "subject_line": "صورت‌جلسه‌ی تحویل موقت {project_title}",
+  "body": [
+   "احتراماً، به استحضار می‌رساند مطابق ابلاغ شماره {contract_no} مورخ {contract_date} عملیات {project_title} توسط {issuer_name} انجام پذیرفت. فرآیند در تاریخ {handover_date} به پایان رسیده و به‌صورت موقت تحویل بهره‌بردار گردید."
+  ],
+  "fields": [
+   {
+    "name": "contract_no",
+    "label": "شماره قرارداد",
+    "type": "text",
+    "required": false
+   },
+   {
+    "name": "contract_date",
+    "label": "تاریخ قرارداد",
+    "type": "date",
+    "required": false
+   },
+   {
+    "name": "project_title",
+    "label": "موضوع پروژه / کار",
+    "type": "text",
+    "required": true
+   },
+   {
+    "name": "handover_date",
+    "label": "تاریخ تحویل",
+    "type": "date",
+    "required": false
+   }
+  ],
+  "closing": "",
+  "with_items_table": false,
+  "with_clauses": false,
+  "with_account": false,
+  "source": "فولاد بردسیر 1404 (سه امضا: مدیریت کوره، مدیریت کارگاه، پیمانکار)"
+ },
+ {
+  "code": "OPS_CONTRACT_AMENDMENT",
+  "category": "اجرایی",
+  "title": "درخواست اصلاح بندهای قرارداد",
+  "subject_line": "اصلاح بندهای قرارداد",
+  "body": [
+   "لطفاً موارد زیر در قرارداد اصلاح گردد:"
+  ],
+  "fields": [
+   {
+    "name": "contract_no",
+    "label": "شماره قرارداد",
+    "type": "text",
+    "required": false
+   }
+  ],
+  "closing": "با تشکر",
+  "with_items_table": true,
+  "with_clauses": false,
+  "with_account": false,
+  "source": "بافق 1403"
+ },
+ {
+  "code": "OPS_REPLY",
+  "category": "اجرایی",
+  "title": "پاسخ / عطف به نامه",
+  "subject_line": "عطف به نامه‌ی شماره {ref_letter_no}",
+  "body": [
+   "عطف به نامه‌ی شماره {ref_letter_no} آن مدیریت محترم، بدین‌وسیله به استحضار می‌رساند:",
+   "{free_text}"
+  ],
+  "fields": [
+   {
+    "name": "ref_letter_no",
+    "label": "شماره نامه‌ی ایشان",
+    "type": "text",
+    "required": true
+   },
+   {
+    "name": "free_text",
+    "label": "متن",
+    "type": "longtext",
+    "required": true
+   }
+  ],
+  "closing": "با تشکر",
+  "with_items_table": false,
+  "with_clauses": false,
+  "with_account": false,
+  "source": "خیام 1404/11"
+ },
+ {
+  "code": "TECH_REPORT",
+  "category": "فنی",
+  "title": "گزارش بازدید / پیشنهاد فنی (متن آزاد)",
+  "subject_line": "{subject}",
+  "body": [
+   "پیرو {reference}، موارد زیر به استحضار می‌رساند:",
+   "{free_text}"
+  ],
+  "fields": [
+   {
+    "name": "subject",
+    "label": "موضوع",
+    "type": "text",
+    "required": true
+   },
+   {
+    "name": "reference",
+    "label": "پیرو",
+    "type": "choice",
+    "required": true
+   },
+   {
+    "name": "free_text",
+    "label": "متن",
+    "type": "longtext",
+    "required": true
+   }
+  ],
+  "closing": "با تشکر",
+  "with_items_table": false,
+  "with_clauses": false,
+  "with_account": false,
+  "source": "فولاد کرمان، خیام، سپید فراب، ذوب کرمان"
+ },
+ {
+  "code": "BANK_GUARANTEE_REQUEST",
+  "category": "بانکی و اداری",
+  "title": "درخواست صدور ضمانت‌نامه",
+  "subject_line": "درخواست صدور ضمانت‌نامه",
+  "body": [
+   "احتراماً به استحضار می‌رساند {issuer_name} به شناسه‌ی ملی {issuer_national_id} دارنده‌ی حساب شماره {bank_account_no}، با اطلاع از شرایط کلی ایجاد تعهدات آن بانک، درخواست صدور ضمانت‌نامه‌ی {guarantee_type} به مبلغ {amount} ریال به مدت {months} ماه به نفع {beneficiary} را دارد.",
+   "در ضمن این شرکت اعلام می‌دارد مشمول ماده‌ی 141 قانون تجارت نبوده و ورشکسته نمی‌باشد."
+  ],
+  "fields": [
+   {
+    "name": "bank_account_no",
+    "label": "شماره حساب",
+    "type": "text",
+    "required": true
+   },
+   {
+    "name": "guarantee_type",
+    "label": "نوع (موردی / حسن انجام تعهدات / پیش‌پرداخت)",
+    "type": "choice",
+    "required": true
+   },
+   {
+    "name": "amount",
+    "label": "مبلغ (ریال)",
+    "type": "money",
+    "required": true
+   },
+   {
+    "name": "months",
+    "label": "مدت (ماه)",
+    "type": "int",
+    "required": true
+   },
+   {
+    "name": "beneficiary",
+    "label": "به نفع",
+    "type": "party",
+    "required": true
+   }
+  ],
+  "closing": "با تشکر",
+  "with_items_table": false,
+  "with_clauses": false,
+  "with_account": false,
+  "source": "آلیاژی مبارکه 1404"
+ },
+ {
+  "code": "BANK_INTRODUCE_FOR_GUARANTEE",
+  "category": "بانکی و اداری",
+  "title": "معرفی بانک جهت صدور ضمانت‌نامه",
+  "subject_line": "معرفی بانک",
+  "body": [
+   "احتراماً، بدین‌وسیله {bank_name} با کد {branch_code} جهت صدور ضمانت‌نامه‌ی {guarantee_type} مربوط به پروژه‌ی {project_title} به حضور معرفی می‌گردد."
+  ],
+  "fields": [
+   {
+    "name": "bank_name",
+    "label": "نام بانک و شعبه",
+    "type": "text",
+    "required": true
+   },
+   {
+    "name": "branch_code",
+    "label": "کد شعبه",
+    "type": "text",
+    "required": true
+   },
+   {
+    "name": "guarantee_type",
+    "label": "نوع ضمانت‌نامه",
+    "type": "choice",
+    "required": true
+   },
+   {
+    "name": "project_title",
+    "label": "موضوع پروژه / کار",
+    "type": "text",
+    "required": true
+   }
+  ],
+  "closing": "با تشکر",
+  "with_items_table": false,
+  "with_clauses": false,
+  "with_account": false,
+  "source": "آلیاژی مبارکه 1404"
+ },
+ {
+  "code": "BANK_COMMITMENT",
+  "category": "بانکی و اداری",
+  "title": "تعهد ارائه‌ی مدارک به بانک",
+  "subject_line": "تعهد ارائه‌ی مدارک",
+  "body": [
+   "احتراماً، به استحضار می‌رساند {issuer_name} {status_text} و متعهد می‌گردد به محض {when}، {document} را به آن بانک محترم ارائه نماید."
+  ],
+  "fields": [
+   {
+    "name": "status_text",
+    "label": "وضعیت فعلی (مثلاً در حال اخذ گواهی صلاحیت پیمانکاری است)",
+    "type": "text",
+    "required": true
+   },
+   {
+    "name": "when",
+    "label": "زمان (مثلاً دریافت گواهی)",
+    "type": "text",
+    "required": true
+   },
+   {
+    "name": "document",
+    "label": "مدرک",
+    "type": "text",
+    "required": true
+   }
+  ],
+  "closing": "با تشکر",
+  "with_items_table": false,
+  "with_clauses": false,
+  "with_account": false,
+  "source": "صلاحیت پیمانکاری، صورت‌های مالی، افزایش سرمایه 1404"
+ },
+ {
+  "code": "BANK_OPEN_ACCOUNT",
+  "category": "بانکی و اداری",
+  "title": "درخواست افتتاح حساب",
+  "subject_line": "درخواست افتتاح حساب",
+  "body": [
+   "خواهشمند است دستور فرمایید نسبت به افتتاح حساب {account_type} به نام {issuer_name} به شناسه‌ی ملی {issuer_national_id} اقدامات لازم مبذول گردد."
+  ],
+  "fields": [
+   {
+    "name": "account_type",
+    "label": "نوع حساب",
+    "type": "text",
+    "required": true
+   }
+  ],
+  "closing": "با تشکر",
+  "with_items_table": false,
+  "with_clauses": false,
+  "with_account": false,
+  "source": "بانک صادرات 1404"
+ },
+ {
+  "code": "ADMIN_OCCUPATIONAL_HEALTH",
+  "category": "بانکی و اداری",
+  "title": "معرفی به طب کار",
+  "subject_line": "معرفی جهت معاینات طب کار",
+  "body": [
+   "بدین‌وسیله {person_title} {person_name} فرزند {father_name} به شماره‌ی ملی {person_national_id} جهت انجام معاینات طب کار معرفی می‌گردد."
+  ],
+  "fields": [
+   {
+    "name": "person_title",
+    "label": "آقای / خانم",
+    "type": "choice",
+    "required": true
+   },
+   {
+    "name": "person_name",
+    "label": "نام",
+    "type": "text",
+    "required": true
+   },
+   {
+    "name": "father_name",
+    "label": "نام پدر",
+    "type": "text",
+    "required": true
+   },
+   {
+    "name": "person_national_id",
+    "label": "کد ملی",
+    "type": "text",
+    "required": true
+   }
+  ],
+  "closing": "با تشکر",
+  "with_items_table": false,
+  "with_clauses": false,
+  "with_account": false,
+  "source": "طب کار (فرم)"
+ }
+]

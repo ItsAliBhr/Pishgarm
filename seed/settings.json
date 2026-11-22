@@ -1,0 +1,54 @@
+{
+ "currency_input_unit_options": [
+  "ریال",
+  "تومان",
+  "میلیون تومان"
+ ],
+ "currency_output_unit": "ریال",
+ "references": [
+  "پیرو مذاکره‌ی تلفنی انجام‌شده",
+  "پیرو مذاکرات انجام‌شده",
+  "پیرو جلسه‌ی حضوری در آن شرکت",
+  "پیرو بازدید به‌عمل‌آمده",
+  "پیرو درخواست آن شرکت",
+  "پیرو هماهنگی‌های انجام‌شده",
+  "با عنایت به قرارداد فی‌مابین"
+ ],
+ "salutations": [
+  "با سلام و احترام؛",
+  "با سلام و احترام،",
+  "با سلام"
+ ],
+ "closings": [
+  "با تشکر",
+  "با احترام",
+  "با تجدید احترام",
+  "باسپاس"
+ ],
+ "letter_header_lines": [
+  "باسمه تعالی",
+  "بسمه تعالی",
+  ""
+ ],
+ "addressee_formats": [
+  "{company}\n{title_prefix} {contact_title} {contact_name}",
+  "{position} محترم {company}\n{title_prefix} {contact_title} {contact_name}",
+  "شرکت محترم {company}"
+ ],
+ "title_prefixes": [
+  "جناب آقای",
+  "سرکار خانم"
+ ],
+ "contact_titles": [
+  "مهندس",
+  "دکتر",
+  ""
+ ],
+ "attachment_default": "ندارد",
+ "insurance_percent_default": 16.67,
+ "vat_percent_default": 10,
+ "markup_percent_default": 0,
+ "output_root": "%USERPROFILE%\\Documents\\اسناد پیشگرم",
+ "folder_pattern": "{party_short_name}\\{project_title}",
+ "file_name_pattern": "{doc_type} {party_short_name} {number_safe} {date_compact}"
+}
